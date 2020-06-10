@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XVu-im-hrr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="TNs-84-lPf">
+            <objects>
+                <viewController id="XVu-im-hrr" customClass="LaunchViewController" customModule="SUSF_TASK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnY-e8-FW5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3p-dC-tuH">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-vG-14y">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Exq-S9-qff" firstAttribute="trailing" secondItem="i3p-dC-tuH" secondAttribute="trailing" constant="20" id="0Df-D8-xWV"/>
+                            <constraint firstItem="i3p-dC-tuH" firstAttribute="leading" secondItem="Exq-S9-qff" secondAttribute="leading" constant="20" id="AhS-28-IwP"/>
+                            <constraint firstItem="Exq-S9-qff" firstAttribute="bottom" secondItem="i3p-dC-tuH" secondAttribute="bottom" constant="20" id="MQS-VS-Jc3"/>
+                            <constraint firstItem="i3p-dC-tuH" firstAttribute="top" secondItem="Exq-S9-qff" secondAttribute="top" constant="20" id="WDj-iJ-mle"/>
+                            <constraint firstItem="sWs-vG-14y" firstAttribute="centerX" secondItem="cnY-e8-FW5" secondAttribute="centerX" id="nRm-jw-0VE"/>
+                            <constraint firstItem="sWs-vG-14y" firstAttribute="centerY" secondItem="cnY-e8-FW5" secondAttribute="centerY" id="vot-Q0-Qdj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Exq-S9-qff"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="i3p-dC-tuH" id="jgT-8S-Vip"/>
+                        <outlet property="indicator" destination="sWs-vG-14y" id="CKo-Ox-hTR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="riz-qI-0gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="148"/>
+        </scene>
+    </scenes>
+</document>

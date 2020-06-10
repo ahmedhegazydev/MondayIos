@@ -1,0 +1,6 @@
+module LDOHairlineBorderView {
+  umbrella header "LDOHairlineBorderView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module TORoundedButton {
+  umbrella header "TORoundedButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

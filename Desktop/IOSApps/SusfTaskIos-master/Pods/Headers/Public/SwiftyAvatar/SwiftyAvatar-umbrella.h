@@ -1,0 +1,1 @@
+../../../Target Support Files/SwiftyAvatar/SwiftyAvatar-umbrella.h

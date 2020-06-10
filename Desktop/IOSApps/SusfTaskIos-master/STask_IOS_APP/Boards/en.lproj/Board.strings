@@ -1,0 +1,48 @@
+
+/* Class = "UINavigationItem"; title = "All Borads"; ObjectID = "0ya-FQ-iCH"; */
+"0ya-FQ-iCH.title" = "All Borads";
+
+/* Class = "UITabBarItem"; title = "Inbox"; ObjectID = "1bB-bl-zhP"; */
+"1bB-bl-zhP.title" = "Inbox";
+
+/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "4SB-gB-Tt3"; */
+"4SB-gB-Tt3.title" = "Notifications";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "DMt-Wd-slE"; */
+"DMt-Wd-slE.title" = "Profile";
+
+/* Class = "UILabel"; text = " Label Label LabelLabelLabelLabelLabelLabelLabelLabel hmee we we we we we we we we we "; ObjectID = "JhZ-5a-bHQ"; */
+"JhZ-5a-bHQ.text" = " Label Label LabelLabelLabelLabelLabelLabelLabelLabel hmee we we we we we we we we we ";
+
+/* Class = "UINavigationItem"; title = "Details"; ObjectID = "Mqn-zc-7ZY"; */
+"Mqn-zc-7ZY.title" = "Details";
+
+/* Class = "UILabel"; text = "Attachment name ?"; ObjectID = "ZKH-ZW-A1t"; */
+"ZKH-ZW-A1t.text" = "Attachment name ?";
+
+/* Class = "UISegmentedControl"; ZaH-uq-Tam.segmentTitles[0] = "Notifications"; ObjectID = "ZaH-uq-Tam"; */
+"ZaH-uq-Tam.segmentTitles[0]" = "Notifications";
+
+/* Class = "UISegmentedControl"; ZaH-uq-Tam.segmentTitles[1] = "Tasks"; ObjectID = "ZaH-uq-Tam"; */
+"ZaH-uq-Tam.segmentTitles[1]" = "Tasks";
+
+/* Class = "UILabel"; text = "01156749640"; ObjectID = "aW4-ql-SE3"; */
+"aW4-ql-SE3.text" = "01156749640";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "az8-4Y-9JS"; */
+"az8-4Y-9JS.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "itQ-SX-YDM"; */
+"itQ-SX-YDM.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Boards"; ObjectID = "oi7-PG-NY8"; */
+"oi7-PG-NY8.title" = "Boards";
+
+/* Class = "UILabel"; text = "Ahmed Hegazy"; ObjectID = "sMw-7i-MCP"; */
+"sMw-7i-MCP.text" = "Ahmed Hegazy";
+
+/* Class = "UIButton"; normalTitle = "Edit Profile"; ObjectID = "sWC-DH-rhr"; */
+"sWC-DH-rhr.normalTitle" = "Edit Profile";
+
+/* Class = "UITabBarItem"; title = "More"; ObjectID = "vY9-PQ-xkW"; */
+"vY9-PQ-xkW.title" = "More";

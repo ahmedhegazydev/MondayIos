@@ -1,0 +1,393 @@
+PODS:
+  - Alamofire (5.1.0)
+  - AttachmentInput (0.0.2):
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+  - AttachmentPicker (1.0.10)
+  - BorderedView (0.1.0)
+  - Cache (5.2.0)
+  - CDAlertView (0.10.0)
+  - CircularProgressBar (1.0.4)
+  - Differentiator (4.0.1)
+  - DTZFloatingActionButton (0.4.0)
+  - FileBrowser (1.0.0)
+  - Firebase/Core (6.24.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.5.0)
+  - Firebase/CoreOnly (6.24.0):
+    - FirebaseCore (= 6.7.0)
+  - Firebase/Database (6.24.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.2.1)
+  - Firebase/Messaging (6.24.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.4.0)
+  - FirebaseAnalytics (6.5.0):
+    - FirebaseCore (~> 6.7)
+    - FirebaseInstallations (~> 1.2)
+    - GoogleAppMeasurement (= 6.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 1.30905.0)
+  - FirebaseAnalyticsInterop (1.5.0)
+  - FirebaseAuthInterop (1.1.0)
+  - FirebaseCore (6.7.0):
+    - FirebaseCoreDiagnostics (~> 1.3)
+    - FirebaseCoreDiagnosticsInterop (~> 1.2)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Logger (~> 6.5)
+  - FirebaseCoreDiagnostics (1.3.0):
+    - FirebaseCoreDiagnosticsInterop (~> 1.2)
+    - GoogleDataTransportCCTSupport (~> 3.1)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Logger (~> 6.5)
+    - nanopb (~> 1.30905.0)
+  - FirebaseCoreDiagnosticsInterop (1.2.0)
+  - FirebaseDatabase (6.2.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - leveldb-library (~> 1.22)
+  - FirebaseInstallations (1.2.0):
+    - FirebaseCore (~> 6.6)
+    - GoogleUtilities/Environment (~> 6.6)
+    - GoogleUtilities/UserDefaults (~> 6.6)
+    - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (4.3.4):
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstallations (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+  - FirebaseMessaging (4.4.0):
+    - FirebaseAnalyticsInterop (~> 1.5)
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstanceID (~> 4.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Reachability (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+    - Protobuf (>= 3.9.2, ~> 3.9)
+  - GoneVisible (1.2.0)
+  - GoogleAppMeasurement (6.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 1.30905.0)
+  - GoogleDataTransport (6.1.0)
+  - GoogleDataTransportCCTSupport (3.1.0):
+    - GoogleDataTransport (~> 6.1)
+    - nanopb (~> 1.30905.0)
+  - GoogleUtilities/AppDelegateSwizzler (6.6.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.6.0):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (6.6.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.6.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.6.0)"
+  - GoogleUtilities/Reachability (6.6.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.6.0):
+    - GoogleUtilities/Logger
+  - GrowingTextView (0.7.2)
+  - HSSearchable (4.2)
+  - ImagePicker (3.1.0)
+  - Imaginary (4.2.0):
+    - Cache (~> 5.0)
+  - InitialsImageView (0.7.0)
+  - JSSAlertView (5.0.2)
+  - Kingfisher (5.3.1)
+  - LDOHairlineBorderView (1.0.1)
+  - LetterAvatarKit (1.2.2)
+  - leveldb-library (1.22)
+  - LGButton (1.1.6)
+  - Lightbox (2.3.0):
+    - Imaginary (~> 4.0)
+  - LJBorderView (0.1.0)
+  - Loaf (0.5.0)
+  - Localize-Swift (2.0.0)
+  - LUExpandableTableView (5.0.0)
+  - Malert (4.0)
+  - MaterialActivityIndicator (0.0.6)
+  - MBCircularProgressBar (0.3.5)
+  - MOLH (1.3)
+  - nanopb (1.30905.0):
+    - nanopb/decode (= 1.30905.0)
+    - nanopb/encode (= 1.30905.0)
+  - nanopb/decode (1.30905.0)
+  - nanopb/encode (1.30905.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (3.5.2)
+  - PasswordTextField (1.2.0)
+  - PDFReader (2.5.1)
+  - PMAlertController (4.0.0)
+  - PromisesObjC (1.2.8)
+  - Protobuf (3.11.4)
+  - PryntTrimmerView (4.0.0)
+  - RestEssentials (5.1.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SMIconLabel (0.5.0)
+  - SnapKit (5.0.1)
+  - SSCustomTabbar (2.0.6)
+  - SteviaLayout (4.7.3)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
+  - SwiftyAvatar (1.1.3)
+  - SwiftyJSON (4.3.0)
+  - TextFieldEffects (1.6.0)
+  - TextImageButton (0.2)
+  - Toast-Swift (5.0.1)
+  - TORoundedButton (1.1.2)
+  - TTCardView (0.1.1)
+  - ViewAnimator (2.7.0)
+  - VVCircleProgressBar (0.0.4)
+  - YNExpandableCell (1.2.1)
+  - YPImagePicker (4.2.0):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.1)
+  - AttachmentInput
+  - AttachmentPicker
+  - BorderedView
+  - CDAlertView
+  - CircularProgressBar
+  - DTZFloatingActionButton
+  - FileBrowser (~> 1.0)
+  - Firebase/Core
+  - Firebase/Database
+  - Firebase/Messaging
+  - GoneVisible
+  - GrowingTextView (= 0.7.2)
+  - HSSearchable
+  - ImagePicker
+  - InitialsImageView
+  - JSSAlertView
+  - Kingfisher (= 5.3.1)
+  - LDOHairlineBorderView
+  - LetterAvatarKit (= 1.2.2)
+  - LGButton
+  - Lightbox
+  - LJBorderView
+  - Loaf
+  - Localize-Swift (~> 2.0)
+  - LUExpandableTableView
+  - Malert
+  - MaterialActivityIndicator
+  - MBCircularProgressBar
+  - MOLH
+  - NVActivityIndicatorView
+  - ObjectMapper (~> 3.4)
+  - PasswordTextField
+  - PDFReader
+  - PMAlertController
+  - RestEssentials (~> 5.1.0)
+  - SDWebImage (~> 5.0)
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SMIconLabel
+  - SnapKit (~> 5.0.0)
+  - SSCustomTabbar
+  - SwiftMessages
+  - SwiftyAvatar (~> 1.1)
+  - SwiftyJSON (~> 4.0)
+  - TextFieldEffects
+  - TextImageButton
+  - Toast-Swift (~> 5.0.1)
+  - TORoundedButton
+  - TTCardView
+  - ViewAnimator
+  - VVCircleProgressBar
+  - YNExpandableCell
+  - YPImagePicker
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AttachmentInput
+    - AttachmentPicker
+    - BorderedView
+    - Cache
+    - CDAlertView
+    - CircularProgressBar
+    - Differentiator
+    - DTZFloatingActionButton
+    - FileBrowser
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
+    - FirebaseAuthInterop
+    - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
+    - FirebaseDatabase
+    - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - GoneVisible
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
+    - GoogleUtilities
+    - GrowingTextView
+    - HSSearchable
+    - ImagePicker
+    - Imaginary
+    - InitialsImageView
+    - JSSAlertView
+    - Kingfisher
+    - LDOHairlineBorderView
+    - LetterAvatarKit
+    - leveldb-library
+    - LGButton
+    - Lightbox
+    - LJBorderView
+    - Loaf
+    - Localize-Swift
+    - LUExpandableTableView
+    - Malert
+    - MaterialActivityIndicator
+    - MBCircularProgressBar
+    - MOLH
+    - nanopb
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - PasswordTextField
+    - PDFReader
+    - PMAlertController
+    - PromisesObjC
+    - Protobuf
+    - PryntTrimmerView
+    - RestEssentials
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SkyFloatingLabelTextField
+    - SMIconLabel
+    - SnapKit
+    - SSCustomTabbar
+    - SteviaLayout
+    - SwiftMessages
+    - SwiftyAvatar
+    - SwiftyJSON
+    - TextFieldEffects
+    - TextImageButton
+    - Toast-Swift
+    - TORoundedButton
+    - TTCardView
+    - ViewAnimator
+    - VVCircleProgressBar
+    - YNExpandableCell
+    - YPImagePicker
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  AttachmentInput: 2997da5d09603edab18118e5fb65e53604342127
+  AttachmentPicker: 318b2f8e28e6ac1f3dce904584692fec68c5a67c
+  BorderedView: d5a4373310d6c7c0fa922eade7ca13672541dad8
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
+  CircularProgressBar: 3807bc06ff36802d06631a3b65b702696aa072a1
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  DTZFloatingActionButton: 746febb29e47f9023089cb7bab15da2b1cbbf888
+  FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
+  Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
+  FirebaseAnalytics: 7386fc2176e3f93ad8ef34b5b1f2b33a891e4962
+  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
+  FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
+  FirebaseCore: e610482f64097b0e9f056cd97bc6b33dfabcbb6a
+  FirebaseCoreDiagnostics: 4a773a47bd83bbd5a9b1ccf1ce7caa8b2d535e67
+  FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
+  FirebaseDatabase: 4e99c0c475d1ee0aa64ae2b53c93f80b7b60d7d9
+  FirebaseInstallations: 2119fb3e46b0a88bfdbf12562f855ee3252462fa
+  FirebaseInstanceID: cef67c4967c7cecb56ea65d8acbb4834825c587b
+  FirebaseMessaging: 58cb17277641a0084d98d4951ba1f1fb0588c8c6
+  GoneVisible: c552940cd9df7548427f6bffd000dcbcc6de187f
+  GoogleAppMeasurement: 4c644d86835d827bab30ab6aabb9ecaf1f500735
+  GoogleDataTransport: f6f8eba931df03ebd2232ff4645aa85f8f47b5ab
+  GoogleDataTransportCCTSupport: d70a561f7d236af529fee598835caad5e25f6d3d
+  GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  HSSearchable: dbc30021c7d85f709eb58d9d25a5c95cdcecbe2b
+  ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
+  Imaginary: dae33d06dbc2ada22f98afef5eb45cc061311a2c
+  InitialsImageView: 7a416d36fc6df5434198664db28a3ffb0228426d
+  JSSAlertView: 18345e37d8295827428c12b773b6d75d0dfd0b28
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  LDOHairlineBorderView: 6691cddb9785c11a032279659f3ae36e85ef6349
+  LetterAvatarKit: ad0fd9a9fe7c3721059cad56ed79fffc52e6a2fb
+  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
+  Lightbox: d317750e4132bfb871a5307cfe0a2c7d6a583c65
+  LJBorderView: 8415136dc50f85c304dc9497ef9f50f5451af056
+  Loaf: 0800b444431366bc395d54267975d4ad4ad5c99c
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  LUExpandableTableView: 710ed7e7d55d0b58d61c95561bd9ecbf39692010
+  Malert: 78badcb143f4df7bff1fa62f4bec05497c7865f3
+  MaterialActivityIndicator: 5061a52fadf7d22533734f2d34806311331bc424
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  MOLH: a31ef0b87351074d81253606a96b290f9eca161a
+  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
+  PDFReader: 2c4a845d0560f33221cf911516e3b700967680f6
+  PMAlertController: 5fad2da8b9eb687134ed50c3462fed12c3afe976
+  PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  RestEssentials: e91de7d7b97329128761de8c40abf93fba64b764
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SMIconLabel: 979cdbe5b1cda89bff21eeb3c8f4cbc2aad8e3b1
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SSCustomTabbar: a52533e429bd40f52ce8d7ecb801f3521fbd56a0
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
+  SwiftyAvatar: 33aecda825c91851cac2aabd06b33f3698b2414c
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+  TextImageButton: cb9c8076894860d39330edaa12c476f9fa0fc126
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  TORoundedButton: d40dbf6f830dbe7a784a592d9f7933a3a49fd31e
+  TTCardView: 99cebbf2673d8df592f3264a51105b294d31c7ca
+  ViewAnimator: 5af1c6f3b310f012bf081259c43717aa54fbae73
+  VVCircleProgressBar: 0814b0713803b5715289615bd0325c494081b8ea
+  YNExpandableCell: f71457eddc5f2d607de5a2aef545325b0b7622e4
+  YPImagePicker: accf310f9526641a84372c0ecf943547d9b1e52c
+
+PODFILE CHECKSUM: 802a6e34a84e9816c6ecdc72beae0f5731a5931d
+
+COCOAPODS: 1.9.1

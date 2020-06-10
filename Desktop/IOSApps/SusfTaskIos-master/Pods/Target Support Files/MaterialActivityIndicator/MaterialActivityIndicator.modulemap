@@ -1,0 +1,6 @@
+module MaterialActivityIndicator {
+  umbrella header "MaterialActivityIndicator-umbrella.h"
+
+  export *
+  module * { export * }
+}

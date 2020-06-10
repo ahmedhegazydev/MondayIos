@@ -1,0 +1,6 @@
+module Pods_STask_IOS_APP {
+  umbrella header "Pods-STask_IOS_APP-umbrella.h"
+
+  export *
+  module * { export * }
+}

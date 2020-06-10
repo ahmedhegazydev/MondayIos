@@ -1,0 +1,6 @@
+module AttachmentInput {
+  umbrella header "AttachmentInput-umbrella.h"
+
+  export *
+  module * { export * }
+}

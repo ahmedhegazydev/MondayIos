@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="YNSegmentCell" rowHeight="160" id="g6F-Qg-4mn" customClass="YNSegmentCell" customModule="YNExpandableCellDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g6F-Qg-4mn" id="i63-zi-CAN">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize Segment Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOS-e6-ZzX">
+                        <rect key="frame" x="20" y="8" width="181.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3ph-Qv-wyQ"/>
+                            <constraint firstAttribute="width" constant="181.5" id="fm7-yj-8Wu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LTz-cl-fct">
+                        <rect key="frame" x="20" y="43" width="335" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="Umf-1p-A2Q"/>
+                        </constraints>
+                        <segments>
+                            <segment title="First"/>
+                            <segment title="Second"/>
+                        </segments>
+                    </segmentedControl>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mon-gi-nDo">
+                        <rect key="frame" x="20" y="97" width="335" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="bJ6-mI-k62"/>
+                        </constraints>
+                        <segments>
+                            <segment title="First"/>
+                            <segment title="Second"/>
+                            <segment title="Third"/>
+                        </segments>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LTz-cl-fct" secondAttribute="trailing" constant="20" id="5EG-jx-meE"/>
+                    <constraint firstItem="zOS-e6-ZzX" firstAttribute="top" secondItem="i63-zi-CAN" secondAttribute="top" constant="8" id="8fD-qp-wJu"/>
+                    <constraint firstItem="Mon-gi-nDo" firstAttribute="leading" secondItem="i63-zi-CAN" secondAttribute="leading" constant="20" id="CHO-R9-bhd"/>
+                    <constraint firstItem="LTz-cl-fct" firstAttribute="leading" secondItem="i63-zi-CAN" secondAttribute="leading" constant="20" id="baC-yh-dH8"/>
+                    <constraint firstItem="Mon-gi-nDo" firstAttribute="top" secondItem="LTz-cl-fct" secondAttribute="bottom" constant="26" id="eti-lE-Bdm"/>
+                    <constraint firstItem="zOS-e6-ZzX" firstAttribute="leading" secondItem="i63-zi-CAN" secondAttribute="leading" constant="20" id="kc4-0c-EKs"/>
+                    <constraint firstItem="LTz-cl-fct" firstAttribute="top" secondItem="zOS-e6-ZzX" secondAttribute="bottom" constant="14" id="mcE-IU-Fbn"/>
+                    <constraint firstAttribute="trailing" secondItem="Mon-gi-nDo" secondAttribute="trailing" constant="20" id="teq-HY-m2C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-219.5" y="-111"/>
+        </tableViewCell>
+    </objects>
+</document>

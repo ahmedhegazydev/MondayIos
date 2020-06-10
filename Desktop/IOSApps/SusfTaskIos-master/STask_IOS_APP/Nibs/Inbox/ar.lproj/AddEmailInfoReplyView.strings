@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "Compose email"; ObjectID = "DnT-fE-5qn"; */
+"DnT-fE-5qn.placeholder" = "ادخل البريد الالكتروني";
+
+/* Class = "UIButton"; normalTitle = "BACK"; ObjectID = "Ysi-7v-gcD"; */
+"Ysi-7v-gcD.normalTitle" = "رجوع";
+
+/* Class = "UITextField"; placeholder = "Subject"; ObjectID = "pRK-HE-n2z"; */
+"pRK-HE-n2z.placeholder" = "الموضوع";

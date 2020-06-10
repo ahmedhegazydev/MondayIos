@@ -1,0 +1,6 @@
+module BorderedView {
+  umbrella header "BorderedView-umbrella.h"
+
+  export *
+  module * { export * }
+}

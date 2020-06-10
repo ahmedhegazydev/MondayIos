@@ -1,0 +1,6 @@
+module RestEssentials {
+  umbrella header "RestEssentials-umbrella.h"
+
+  export *
+  module * { export * }
+}

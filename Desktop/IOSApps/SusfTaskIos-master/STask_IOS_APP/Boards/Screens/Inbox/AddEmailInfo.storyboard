@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g3g-15-c8X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Email Info Vc-->
+        <scene sceneID="NMn-DL-LP8">
+            <objects>
+                <viewController storyboardIdentifier="AddEmailInfoVc" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g3g-15-c8X" customClass="AddEmailInfoVc" customModule="SUSF_TASK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XE6-nV-aP0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IpW-Qn-lXp">
+                                <rect key="frame" x="20" y="299" width="374" height="298"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ja-RG-wzW">
+                                        <rect key="frame" x="8" y="20" width="358" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="oGp-Cd-0sW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Vq-om-BO8">
+                                        <rect key="frame" x="8" y="78" width="358" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="WD4-0S-p70"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7Vq-om-BO8" secondAttribute="trailing" constant="8" id="7C1-ns-3S0"/>
+                                    <constraint firstItem="5ja-RG-wzW" firstAttribute="leading" secondItem="IpW-Qn-lXp" secondAttribute="leading" constant="8" id="Cl2-2c-mL1"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ja-RG-wzW" secondAttribute="trailing" constant="8" id="Ygc-u2-eaZ"/>
+                                    <constraint firstItem="7Vq-om-BO8" firstAttribute="top" secondItem="5ja-RG-wzW" secondAttribute="bottom" constant="8" id="fUX-IF-t9S"/>
+                                    <constraint firstItem="5ja-RG-wzW" firstAttribute="top" secondItem="IpW-Qn-lXp" secondAttribute="top" constant="20" id="fmA-5B-K5F"/>
+                                    <constraint firstItem="7Vq-om-BO8" firstAttribute="leading" secondItem="IpW-Qn-lXp" secondAttribute="leading" constant="8" id="ydy-CD-5uE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iXu-rk-Wyp" firstAttribute="trailing" secondItem="IpW-Qn-lXp" secondAttribute="trailing" constant="20" id="1gA-h0-dXs"/>
+                            <constraint firstItem="IpW-Qn-lXp" firstAttribute="top" secondItem="iXu-rk-Wyp" secondAttribute="top" constant="255" id="A10-GZ-bux"/>
+                            <constraint firstItem="IpW-Qn-lXp" firstAttribute="leading" secondItem="iXu-rk-Wyp" secondAttribute="leading" constant="20" id="Zzu-Lz-g1S"/>
+                            <constraint firstItem="iXu-rk-Wyp" firstAttribute="bottom" secondItem="IpW-Qn-lXp" secondAttribute="bottom" constant="265" id="aYX-Dr-HCM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iXu-rk-Wyp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kW-bw-8IL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,14 @@
+
+/* Class = "UILabel"; text = "To"; ObjectID = "A5d-32-ItO"; */
+"A5d-32-ItO.text" = "To";
+
+/* Class = "UISearchBar"; placeholder = "Recipients"; ObjectID = "hzX-sK-DBz"; */
+"hzX-sK-DBz.placeholder" = "Recipients";
+
+/* Class = "UITextField"; placeholder = "Compose email"; ObjectID = "mS9-zK-kol"; */
+"mS9-zK-kol.placeholder" = "Compose email";
+
+/* Class = "UITextField"; placeholder = "Subject"; ObjectID = "scQ-O8-Fxv"; */
+"scQ-O8-Fxv.placeholder" = "Subject";
+
+"8sO-Xt-iM6.normalTitle" = "Back";

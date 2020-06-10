@@ -1,0 +1,24 @@
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "60z-un-056"; */
+"60z-un-056.placeholder" = "Enter your password";
+
+/* Class = "UILabel"; text = "Login in"; ObjectID = "8BS-Oe-Qb3"; */
+"8BS-Oe-Qb3.text" = "Login in";
+
+/* Class = "UIButton"; normalTitle = " Arabic"; ObjectID = "DxG-AU-zUi"; */
+"DxG-AU-zUi.normalTitle" = " Arabic";
+
+/* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "OsV-Se-4HC"; */
+"OsV-Se-4HC.placeholder" = "Enter your email";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "TRt-VL-bkM"; */
+"TRt-VL-bkM.normalTitle" = "Login";
+
+/* Class = "UINavigationItem"; title = "Image Slider"; ObjectID = "d9S-oU-byY"; */
+"d9S-oU-byY.title" = "Image Slider";
+
+/* Class = "UIButton"; normalTitle = "Create new account"; ObjectID = "uau-6g-mB8"; */
+"uau-6g-mB8.normalTitle" = "Create new account";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "w7t-AJ-eJG"; */
+"w7t-AJ-eJG.normalTitle" = "Login";

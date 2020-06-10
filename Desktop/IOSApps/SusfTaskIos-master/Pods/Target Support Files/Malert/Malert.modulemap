@@ -1,0 +1,6 @@
+module Malert {
+  umbrella header "Malert-umbrella.h"
+
+  export *
+  module * { export * }
+}
