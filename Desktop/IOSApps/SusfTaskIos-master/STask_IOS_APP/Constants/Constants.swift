@@ -26,8 +26,8 @@ struct Constants {
         let url: String = defaults.value(forKey: Constants.SELECTED_BASE_URL) as! String
         if url != nil{
             print("Selected base url = \(url)")
-            //return url
-            return "http://wayak.org/"
+            return url
+//            return "http://wayak.org/"
         }else{
             print("nil gogo")
         }
