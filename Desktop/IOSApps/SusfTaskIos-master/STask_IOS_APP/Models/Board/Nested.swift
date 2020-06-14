@@ -190,19 +190,31 @@ struct TaskH: Codable {
 
 // MARK: - User
 public struct UserHere: Codable {
-    let id: String?
+    var id: String?
 //    let _id: String?
-    let userName: String?
-    let shortName: String?
-    let userImage: String?
-    let fullName: String?
-    let name: String?
+    var userName: String?
+    var shortName: String?
+    var userImage: String?
+    var fullName: String?
+    var name: String?
     
     enum CodingKeys: String, CodingKey {
         case id
-//        case _id
         case userName, shortName, userImage, fullName, name
     }
+    
+    init() {
+            self.id = ""
+            self.userName = ""
+            self.shortName = ""
+            self.userImage = ""
+            self.fullName = ""
+            self.name = ""
+           
+        }
+    
+    
+    
 }
 
 // MARK: - Comment

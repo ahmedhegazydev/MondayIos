@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00027B0824951038006966C3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00027B0724951038006966C3 /* Status.swift */; };
+		00027B0A2495BB39006966C3 /* UrlValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00027B092495BB39006966C3 /* UrlValidation.swift */; };
 		00088FFE24537FEC00381526 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00088FFA24537FE900381526 /* TagListView.swift */; };
 		00088FFF24537FEC00381526 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00088FFB24537FEA00381526 /* TagView.swift */; };
 		0008900024537FEC00381526 /* CloseButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00088FFC24537FEB00381526 /* CloseButton1.swift */; };
@@ -89,6 +91,7 @@
 		00A2D98C2447F7D9003971B0 /* CellComment2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A2D98A2447F7D9003971B0 /* CellComment2.swift */; };
 		00A2D98D2447F7D9003971B0 /* CellComment2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A2D98B2447F7D9003971B0 /* CellComment2.xib */; };
 		00A2D98F244825F2003971B0 /* Tasks.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00A2D98E244825F2003971B0 /* Tasks.rtf */; };
+		00A6E3042494C07C005686AB /* PostNewTaskToBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A6E3032494C07C005686AB /* PostNewTaskToBoardVC.swift */; };
 		00BFF966243A75CE00A58CB9 /* GroupTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF964243A75CE00A58CB9 /* GroupTaskCell.swift */; };
 		00BFF967243A75CE00A58CB9 /* GroupTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BFF965243A75CE00A58CB9 /* GroupTaskCell.xib */; };
 		00BFF96A243A953700A58CB9 /* GroupSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BFF968243A953700A58CB9 /* GroupSectionHeader.swift */; };
@@ -142,6 +145,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00027B0724951038006966C3 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		00027B092495BB39006966C3 /* UrlValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlValidation.swift; sourceTree = "<group>"; };
 		00088FFA24537FE900381526 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		00088FFB24537FEA00381526 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		00088FFC24537FEB00381526 /* CloseButton1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton1.swift; sourceTree = "<group>"; };
@@ -241,6 +246,7 @@
 		00A2D98A2447F7D9003971B0 /* CellComment2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellComment2.swift; sourceTree = "<group>"; };
 		00A2D98B2447F7D9003971B0 /* CellComment2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellComment2.xib; sourceTree = "<group>"; };
 		00A2D98E244825F2003971B0 /* Tasks.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Tasks.rtf; sourceTree = "<group>"; };
+		00A6E3032494C07C005686AB /* PostNewTaskToBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewTaskToBoardVC.swift; sourceTree = "<group>"; };
 		00BFF964243A75CE00A58CB9 /* GroupTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTaskCell.swift; sourceTree = "<group>"; };
 		00BFF965243A75CE00A58CB9 /* GroupTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTaskCell.xib; sourceTree = "<group>"; };
 		00BFF968243A953700A58CB9 /* GroupSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSectionHeader.swift; sourceTree = "<group>"; };
@@ -683,6 +689,7 @@
 				0014BC11244E70F300D18601 /* HtmlDisply.swift */,
 				001C179C24521E0D00E180F4 /* DownloadImgIWithLoader.swift */,
 				00470524247EB8DC00592047 /* ScreenSizeChecker.swift */,
+				00027B092495BB39006966C3 /* UrlValidation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -726,6 +733,7 @@
 				0052DAF02442C948005782FD /* InboxGetUser.swift */,
 				00EFCFF1244FE96F00B84595 /* CommentAdded.swift */,
 				0038C2D0247C1BB100EF95DD /* DataNotifi.swift */,
+				00027B0724951038006966C3 /* Status.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -790,6 +798,7 @@
 				00F7412A2436767E00749B4A /* MoreViewController.swift */,
 				00F741342436A20D00749B4A /* ProfileViewController.swift */,
 				00F741362436B37A00749B4A /* NotificationViewController.swift */,
+				00A6E3032494C07C005686AB /* PostNewTaskToBoardVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -1118,9 +1127,11 @@
 				001C179F2452215400E180F4 /* ImageLoader.swift in Sources */,
 				00F6E75A2439B5B600623CA7 /* Nested.swift in Sources */,
 				0075C84124383D0A00181F3D /* BoardCell.swift in Sources */,
+				00027B0A2495BB39006966C3 /* UrlValidation.swift in Sources */,
 				00BFF96A243A953700A58CB9 /* GroupSectionHeader.swift in Sources */,
 				00EA734A24358C880010C836 /* Constants.swift in Sources */,
 				0075C84224383D0A00181F3D /* BoardSectionHeader.swift in Sources */,
+				00027B0824951038006966C3 /* Status.swift in Sources */,
 				00470525247EB8DC00592047 /* ScreenSizeChecker.swift in Sources */,
 				00C98152243C82A0008F62BC /* CellAttachment.swift in Sources */,
 				00F7413F2436C53800749B4A /* UtilsAlert.swift in Sources */,
@@ -1176,6 +1187,7 @@
 				001BB3D42442562E0006A52F /* AddEmailInfoVc.swift in Sources */,
 				0044E3DC243F3AE2004D3064 /* CellCommentWithoutReply.swift in Sources */,
 				00EFCFF2244FE96F00B84595 /* CommentAdded.swift in Sources */,
+				00A6E3042494C07C005686AB /* PostNewTaskToBoardVC.swift in Sources */,
 				0075C81124380E2600181F3D /* YNExpandableCells.swift in Sources */,
 				0008900B2453ACD500381526 /* Theme.swift in Sources */,
 				0075C82D2438183100181F3D /* YNTableView.swift in Sources */,

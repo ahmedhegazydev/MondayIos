@@ -26,8 +26,9 @@ struct Constants {
         let url: String = defaults.value(forKey: Constants.SELECTED_BASE_URL) as! String
         if url != nil{
             print("Selected base url = \(url)")
-            return url
-//            return "http://wayak.org/"
+//            return url
+            return "http://wayak.org/"
+//            return "https://mobile.susftask.com/"
         }else{
             print("nil gogo")
         }
@@ -65,9 +66,11 @@ struct Constants {
         static let END_POINT_DELETE_SUB_COMMENT = "task/commentsub/";
         static let END_POINT_GET_ALL_USERS = "​user/allusers";
         static let END_POINT_USER_FORGOT_PASS = "​user/forgot-password";
-
+        static let END_POINT_ADD_TASK_TO_BOARD = "​task";
+        
         
         static let END_POINT_SET_NOTI_AS_SEEN = "​task/notificationSeen/";
+        static let END_POINT_GET_STATUS_IDS = "​taskstatus";
         
         
         static let END_POINT_DEL_ATTACHMENT_GENERAL = "task/deleteattachgeneral/";

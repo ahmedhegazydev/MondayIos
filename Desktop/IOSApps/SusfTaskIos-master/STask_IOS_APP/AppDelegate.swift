@@ -104,7 +104,7 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         
-                UIApplication.shared.applicationIconBadgeNumber = 0
+//                application.shared.applicationIconBadgeNumber = 0
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -127,6 +127,8 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     application.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1
+        
+        
         completionHandler(UIBackgroundFetchResult.newData)
         print(userInfo)
         openNotification(userInfo)

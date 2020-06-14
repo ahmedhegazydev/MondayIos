@@ -24,12 +24,12 @@ import Malert
 class NestedViewController2: UIViewController {
     
     lazy var refresher: UIRefreshControl = {
-           let refresher = UIRefreshControl()
-           refresher.tintColor = Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)
-           refresher.addTarget(self, action: #selector(handleOnRefresh), for: .valueChanged)
-           return refresher
-           
-       }()
+        let refresher = UIRefreshControl()
+        refresher.tintColor = Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)
+        refresher.addTarget(self, action: #selector(handleOnRefresh), for: .valueChanged)
+        return refresher
+        
+    }()
     var fromAllBoardsNotNotifi: Bool = false;
     let cellIdLetterAvatar = "CellLetterAvatar"
     var shortNames: [String] = []
@@ -86,7 +86,33 @@ class NestedViewController2: UIViewController {
         
         
         
+        
+        let addImage = UIImage(systemName: "plus")
+        let addBarButtonItem = UIBarButtonItem(image: addImage, style: .done, target: self, action: #selector(postNewTaskToBoardGroup))
+        self.navigationItem.rightBarButtonItems  = [addBarButtonItem]
+        
+        
     }
+    
+    
+    @objc func postNewTaskToBoardGroup(){
+        
+        let name = "Board"
+        let commentsVc = UIStoryboard(name: name, bundle: .main)
+            .instantiateViewController(withIdentifier:
+                "PostNewTaskVc") as! PostNewTaskToBoardVC
+        commentsVc.modalPresentationStyle = .formSheet
+        commentsVc.modalTransitionStyle = .coverVertical
+        commentsVc.users = self.users
+        commentsVc.tasksGroupId = self.base?.tasksGroup![0].id as! String
+
+        self.navigationController?.pushViewController(commentsVc, animated: true)
+        
+        
+        
+    }
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         //        let tabBar = self.tabBarController!.tabBar as! SSCustomTabBar
@@ -168,17 +194,17 @@ class NestedViewController2: UIViewController {
     }
     
     @objc func handleOnRefresh(){
-               print("refreshing....")
-          
-//           let deadline = DispatchTime.now() + .milliseconds(400)
-//           DispatchQueue.main.asyncAfter(deadline: deadline) {
-//               self.refresher.endRefreshing()
-//           }
-           
+        print("refreshing....")
+        
+        //           let deadline = DispatchTime.now() + .milliseconds(400)
+        //           DispatchQueue.main.asyncAfter(deadline: deadline) {
+        //               self.refresher.endRefreshing()
+        //           }
+        
         
         
         getNested()
-       }
+    }
     
     func getNested(){
         //self.view.makeToastActivity(.center)
@@ -190,7 +216,7 @@ class NestedViewController2: UIViewController {
             .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
             .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
             .init(name: "tz", value: TimeZone.current.identifier)
-,
+            ,
             
         ]
         let id = "?id=\(self.boardId)"
@@ -220,7 +246,7 @@ class NestedViewController2: UIViewController {
                             
                             //fetching nested board
                             self.base = boardData.data?.BoardData?.nestedBoard![0]
-                            
+
                             
                             //saving the nested board
                             let encoder = JSONEncoder()
@@ -367,36 +393,36 @@ class NestedViewController2: UIViewController {
     
     
     func openLinkAlertAction(link: String) {
-            
-           
+        
+        
         
         let alertControllerLang = UIAlertController(title: Constants.APP_NAME, message: "Do u want to browse link?", preferredStyle: .alert)
         
-            let arabic = UIAlertAction(title: "Yes", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+        let arabic = UIAlertAction(title: "Yes", style: .default, handler: { (alert: UIAlertAction!) -> Void in
             
-                
-                if link.starts(with: "http") || link.starts(with: "https"){
-               guard let url = URL(string: link) else { return }
-                                     UIApplication.shared.open(url)
-                }
-               
-                
-            })
             
-            let english = UIAlertAction(title: "No", style: .default, handler: { (alert: UIAlertAction!) -> Void in
-
-              alertControllerLang.dismiss(animated: true) {
-                  
-              }
-                
-            })
+            if link.starts(with: "http") || link.starts(with: "https"){
+                guard let url = URL(string: link) else { return }
+                UIApplication.shared.open(url)
+            }
             
-            alertControllerLang.addAction(arabic)
+            
+        })
+        
+        let english = UIAlertAction(title: "No", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            
+            alertControllerLang.dismiss(animated: true) {
+                
+            }
+            
+        })
+        
+        alertControllerLang.addAction(arabic)
         alertControllerLang.addAction(english)
-            
+        
         self.present(alertControllerLang, animated: true, completion: nil)
-            
-        }
+        
+    }
     
 }
 
@@ -413,11 +439,11 @@ extension NestedViewController2: DelegateAttachGroupSection{
     func onGroupSecAttachClicked(task: TasksGroup?) {
         
         
-UserDefaults.standard.setValue(true, forKey: Constants.FROM_ALL_BOARDS_OR_NOTIFI)
-       let tabBar = self.tabBarController!.tabBar as! SSCustomTabBar
-       let tabBarController = self.tabBarController!
-       tabBar.tag = 0
-      
+        UserDefaults.standard.setValue(true, forKey: Constants.FROM_ALL_BOARDS_OR_NOTIFI)
+        let tabBar = self.tabBarController!.tabBar as! SSCustomTabBar
+        let tabBarController = self.tabBarController!
+        tabBar.tag = 0
+        
         
         
         //self.view.makeToast("Attach cleicked")
@@ -505,10 +531,10 @@ extension NestedViewController2: DelegateGroupTaskCell{
     func showComments(task: TaskH?) {
         
         UserDefaults.standard.setValue(true, forKey: Constants.FROM_ALL_BOARDS_OR_NOTIFI)
-                let tabBar = self.tabBarController!.tabBar as! SSCustomTabBar
-                let tabBarController = self.tabBarController!
-                tabBar.tag = 0
-                
+        let tabBar = self.tabBarController!.tabBar as! SSCustomTabBar
+        let tabBarController = self.tabBarController!
+        tabBar.tag = 0
+        
         
         
         //self.view.makeToast("comments")
@@ -617,14 +643,14 @@ extension NestedViewController2: UITableViewDataSource {
         cell?.taskName.text = task?.name
         
         //cell?.taskDate.text = Utils.pureDate(dateBefore: task!.startDate)
-//        cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.startDate)
+        //        cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.startDate)
         cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.dueDate)
-
+        
         
         let progressVal: Float = Float(task!.progressValue) / Float(100)
         //cell?.taskProgress.value = CGFloat(progressVal)
         cell?.taskProgress.value = CGFloat(task!.progressValue)
-
+        
         cell?.taskProgress.progressColor = Utils.hexStringToUIColor(hex: (task?.progressColor)!)
         
         let color = task?.status.color
@@ -688,19 +714,23 @@ extension NestedViewController2: UITableViewDataSource {
             
             let cell = self.tableViewAllUsers!.dequeueReusableCell(withIdentifier: "CellUser", for: indexPath) as? CellUser
             let user = self.users[indexPath.row]
+            print("Rorororo \(user.fullName)")
+            print("Rorororo \(user.name)")
+            print("Rorororo \(user.userName)")
+            print("Rorororo \(user.shortName)")
             cell?.lblUserName.text = user.fullName
             
             if let image = user.userImage {
                 if (!image.isEmpty && (image.starts(with: "http") || image.starts(with: "https"))) {
                     let url = URL(string: image)
-                                   cell?.ivUserPhoto.kf.setImage(with: url)
+                    cell?.ivUserPhoto.kf.setImage(with: url)
                 }else{
-                            cell?.ivUserPhoto.image = Utils.letterAvatarImage(chars: user.shortName!)
-                        }
-                    }else{
-                        cell?.ivUserPhoto.image = Utils.letterAvatarImage(chars: user.shortName!)
-                    }
-        
+                    cell?.ivUserPhoto.image = Utils.letterAvatarImage(chars: user.shortName!)
+                }
+            }else{
+                cell?.ivUserPhoto.image = Utils.letterAvatarImage(chars: user.shortName!)
+            }
+            
             
             return cell!
         }

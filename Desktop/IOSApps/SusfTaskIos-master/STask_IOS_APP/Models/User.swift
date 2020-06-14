@@ -15,11 +15,24 @@ struct UserDataAll: Codable {
 
 // MARK: - Datum
 public struct UserAll: Codable {
-    let email, mobile, fullName, shortName: String?
-    let userName: String?
-    let userImage: String?
-    let id: String?
-    let zoomAccount: String?
+    var email, mobile, fullName, shortName: String?
+    var userName: String?
+    var userImage: String?
+    var id: String?
+    var zoomAccount: String?
+    
+    
+    init() {
+        self.email = ""
+         self.mobile = ""
+         self.fullName = ""
+        self.shortName = ""
+        self.userName = ""
+        self.userImage = ""
+        self.id = ""
+        self.zoomAccount = ""
+    }
+    
 }
 
 

@@ -31,8 +31,12 @@ class BoardVController: UIViewController
         getAllBoards()
        // expandableSample1()
         expandableSample2()
-        
+       
+           
     }
+    
+    
+   
     
      func expandableSample2(){
         
