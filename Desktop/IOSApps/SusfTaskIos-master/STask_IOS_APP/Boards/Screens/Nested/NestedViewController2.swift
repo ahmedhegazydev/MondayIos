@@ -97,18 +97,19 @@ class NestedViewController2: UIViewController {
     
     @objc func postNewTaskToBoardGroup(){
         
-        let name = "Board"
-        let commentsVc = UIStoryboard(name: name, bundle: .main)
-            .instantiateViewController(withIdentifier:
-                "PostNewTaskVc") as! PostNewTaskToBoardVC
-        commentsVc.modalPresentationStyle = .formSheet
-        commentsVc.modalTransitionStyle = .coverVertical
-        commentsVc.users = self.users
-        commentsVc.tasksGroupId = self.base?.tasksGroup![0].id as! String
-
-        self.navigationController?.pushViewController(commentsVc, animated: true)
+        if let base = self.base {
+            let name = "Board"
+               let commentsVc = UIStoryboard(name: name, bundle: .main)
+                   .instantiateViewController(withIdentifier:
+                       "PostNewTaskVc") as! PostNewTaskToBoardVC
+               commentsVc.modalPresentationStyle = .formSheet
+               commentsVc.modalTransitionStyle = .coverVertical
+               commentsVc.users = self.users
+               commentsVc.tasksGroupId = base.tasksGroup![0].id as! String
+               self.navigationController?.pushViewController(commentsVc, animated: true)
+        }
         
-        
+           
         
     }
     

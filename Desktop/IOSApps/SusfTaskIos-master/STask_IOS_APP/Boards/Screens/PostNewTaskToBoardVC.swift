@@ -18,8 +18,8 @@ class PostNewTaskToBoardVC: UIViewController {
     
     
     var usersCommas: String = ""
-    //    var dateFormate = "MM/dd/yyyy"
-    var dateFormate = "dd/MM/yyyy"
+    var dateFormate = "MM/dd/yyyy"
+    //    var dateFormate = "dd/MM/yyyy"
     var selectedStatusId: String = ""
     var selectedUsersTags: [UserAll]? = []
     @IBOutlet weak var tagsListView: TagListView!
@@ -34,7 +34,7 @@ class PostNewTaskToBoardVC: UIViewController {
     var users: [UserHere]? = []
     var tasksGroupId: String = ""
     let headers: HTTPHeaders = [
-        //.accept("application/json"),
+        .accept("application/json"),
         .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
         .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
         .init(name: "tz", value: TimeZone.current.identifier)
@@ -55,12 +55,6 @@ class PostNewTaskToBoardVC: UIViewController {
         createEndDatePicker()
         createMeetingDateTimePicker()
         
-        //        self.flagUsersOrStatus = true;
-        //        createAvailabelStatusDataPicker()
-        //
-        //
-        //        self.flagUsersOrStatus = false;
-        //        createSelectedUsersPicker()
         
         
         getAllAvailableStatus()
@@ -70,6 +64,59 @@ class PostNewTaskToBoardVC: UIViewController {
         
         status.delegate = self
         selectedUsers.delegate = self
+        
+        
+        
+        let addImage = UIImage(systemName: "arrowshape.turn.up.right.fill")
+        let addBarButtonItem = UIBarButtonItem(image: addImage, style: .done, target: self, action: #selector(postNewTaskToBoardGroup))
+        self.navigationItem.rightBarButtonItems  = [addBarButtonItem]
+        
+        
+    }
+    
+    
+    @objc func postNewTaskToBoardGroup(){
+        
+        
+        let tasksGroupId = self.tasksGroupId;
+        let assignee = self.usersCommas;
+        let name = self.name.text;
+        let isPrivate = self.isPrivate;
+        let statusId = self.status.text;
+        let startDate = self.startDate.text;
+        let dueDate = self.endDate.text;
+        let meetingUrl = self.meetingLink.text;
+        let meetingTime = self.meetingTime.text;
+        if name!.isEmpty {
+            self.view.makeToast("Enter name")
+        }else{
+            if statusId!.isEmpty {
+                self.view.makeToast("Enter status")
+            }else{
+                if startDate!.isEmpty {
+                    self.view.makeToast("Enter start date")
+                }else{
+                    if dueDate!.isEmpty {
+                        self.view.makeToast("Enter end date")
+                    }else{
+                        if meetingUrl!.isEmpty {
+                            self.view.makeToast("Enter meeting link")
+                        }else{
+                            if !(meetingUrl?.isValidURL())! {
+                                self.view.makeToast("Enter valid meeting link")
+                            }else{
+                                if meetingTime!.isEmpty {
+                                    self.view.makeToast("Enter meeting time")
+                                }else{
+                                    postNewTask()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
         
         
     }
@@ -337,65 +384,15 @@ class PostNewTaskToBoardVC: UIViewController {
         self.view.hideToastActivity()
     }
     
-    @IBAction func btnAddNewTask(_ sender: Any) {
-        
-        
-        let tasksGroupId = self.tasksGroupId;
-        let assignee = self.usersCommas;
-        let name = self.name.text;
-        let isPrivate = self.isPrivate;
-        let statusId = self.status.text;
-        let startDate = self.startDate.text;
-        let dueDate = self.endDate.text;
-        let meetingUrl = self.meetingLink.text;
-        let meetingTime = self.meetingTime.text;
-        if name!.isEmpty {
-            self.view.makeToast("Enter name")
-        }else{
-            if statusId!.isEmpty {
-                self.view.makeToast("Enter status")
-            }else{
-                if startDate!.isEmpty {
-                    self.view.makeToast("Enter start date")
-                }else{
-                    if dueDate!.isEmpty {
-                        self.view.makeToast("Enter end date")
-                    }else{
-                        if meetingUrl!.isEmpty {
-                            self.view.makeToast("Enter meeting link")
-                        }else{
-                            if !(meetingUrl?.isValidURL())! {
-                                self.view.makeToast("Enter valid meeting link")
-                            }else{
-                                if meetingTime!.isEmpty {
-                                    self.view.makeToast("Enter meeting time")
-                                }else{
-                                    postNewTask()
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        
-        
-    }
-    
     
     func postNewTask(){
         
-        
-        
-        
-        
-        self.usersCommas = usersCommas.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        
+        var usersIds: [String] = []
+        for n in 0..<self.selectedUsersTags!.count{
+            usersIds.append(self.selectedUsersTags![n].id!)
+        }
         
         let tasksGroupId: String = self.tasksGroupId;
-        let assignee : String = self.usersCommas;
         let name: String  = self.name.text!;
         let isPrivate = self.isPrivate;
         let statusId : String = selectedStatusId;
@@ -404,8 +401,18 @@ class PostNewTaskToBoardVC: UIViewController {
         let meetingUrl : String = self.meetingLink.text!;
         let meetingTime : String = self.meetingTime.text!;
         
+        
+        //        let tasksGroupId: String = self.tasksGroupId
+        //              let name: String  = self.name.text!
+        //              let isPrivate = self.isPrivate
+        //              let statusId : String = selectedStatusId
+        //              let startDate : String = "06/14/2020"
+        //              let dueDate: String  = "06/16/2020"
+        //              let meetingUrl : String = self.meetingLink.text!
+        //              let meetingTime :String = "06/14/2020 12:10:10"
+        
         print(tasksGroupId)
-        print(assignee)
+        print(usersIds)
         print(name)
         print(isPrivate)
         print(statusId)
@@ -416,27 +423,24 @@ class PostNewTaskToBoardVC: UIViewController {
         
         
         let parameters: [String: Any] = [
-            
             "tasksGroupId": "\(tasksGroupId)",
-            "assignee" : "\(usersCommas)",
+            "assignee" : "\(usersIds)",
             "name" : "\(name)",
             "isPrivate" : "\(isPrivate)",
             "statusId": "\(selectedStatusId)",
             "startDate" : "\(startDate)",
-            "dueDate" : "\(endDate)",
-            "meetingUrl" : "\(meetingLink)",
+            "dueDate" : "\(dueDate)",
+            "meetingUrl" : "\(meetingUrl)",
             "meetingTime" : "\(meetingTime)",
-            
         ]
-        
         self.view.makeToastActivity(.center)
         //        let url = Constants.BASE_URL + Constants.Inbox.END_POST_MAIL
         let url = Constants.BASE_URL + "task"
-        
         debugPrint(url)
-        AF.request(url,method: .post, parameters: parameters,
+        AF.request(url,
+                   method: .post,
+                   parameters: parameters,
                    headers: headers)
-            //.response { response in
             .responseJSON { response in
                 self.view.hideToastActivity()
                 switch response.result {
@@ -450,9 +454,19 @@ class PostNewTaskToBoardVC: UIViewController {
                         debugPrint(message)
                         
                         
+                        self.startDate.text = ""
+                        self.endDate.text = ""
+                        self.meetingTime.text = ""
+                        self.meetingLink.text = ""
+                        self.status.text = ""
+                        self.name.text = ""
+                        //self.selectedUsersTags = []
                         
+                        UtilsAlert.showSuccess(message: message)
+
                         
                     }else{
+                        print(swiftyData["errorMessages"].stringValue)
                         let errorMessage: String =  swiftyData["errorMessages"][0].stringValue
                         debugPrint("error \(errorMessage)")
                         UtilsAlert.showError(message: errorMessage)
@@ -550,7 +564,8 @@ UITextFieldDelegate{
                 userHere.shortName = selectedUser.shortName
                 userHere.userName = selectedUser.userName
                 userHere.fullName = selectedUser.fullName
-                userHere.fullName = selectedUser.fullName
+                userHere.id = selectedUser.id
+                
                 
                 self.selectedUsersTags?.append(userHere)
                 self.tagsListView?.addTag(selectedUser.fullName!)
@@ -591,8 +606,6 @@ extension PostNewTaskToBoardVC: TagListViewDelegate{
             print("hoho  = \(self.selectedUsersTags![n].email)")
         }
         
-        //saving
-        //        UserDefaults.standard.set(try? PropertyListEncoder().encode(self.selectedUsersTags), forKey: Constants.INBOX_SELECTED_RECIPIENTS)
         
         
     }

@@ -126,7 +126,9 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    application.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1
+    
+        
+        application.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1
         
         
         completionHandler(UIBackgroundFetchResult.newData)
