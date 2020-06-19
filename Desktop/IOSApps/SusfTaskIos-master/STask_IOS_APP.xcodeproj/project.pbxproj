@@ -52,6 +52,8 @@
 		0045D752243EA9250019C3FD /* cellMension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045D750243EA9250019C3FD /* cellMension.swift */; };
 		0045D753243EA9250019C3FD /* cellMension.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0045D751243EA9250019C3FD /* cellMension.xib */; };
 		0045D75B243ED7870019C3FD /* OEMentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045D759243ED7860019C3FD /* OEMentions.swift */; };
+		00469C32249C32FF005FEF4C /* PostNewTask.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00469C31249C32FF005FEF4C /* PostNewTask.xib */; };
+		00469C34249C3320005FEF4C /* PostNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C33249C3320005FEF4C /* PostNewTask.swift */; };
 		0046C8612436FCDA00090A6F /* BoardVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046C8602436FCDA00090A6F /* BoardVController.swift */; };
 		0046C8632436FFFB00090A6F /* BoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046C8622436FFFB00090A6F /* BoardData.swift */; };
 		00470525247EB8DC00592047 /* ScreenSizeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00470524247EB8DC00592047 /* ScreenSizeChecker.swift */; };
@@ -199,6 +201,8 @@
 		0045D751243EA9250019C3FD /* cellMension.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellMension.xib; sourceTree = "<group>"; };
 		0045D759243ED7860019C3FD /* OEMentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OEMentions.swift; sourceTree = "<group>"; };
 		0045D75A243ED7870019C3FD /* OEMentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEMentions.h; sourceTree = "<group>"; };
+		00469C31249C32FF005FEF4C /* PostNewTask.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostNewTask.xib; sourceTree = "<group>"; };
+		00469C33249C3320005FEF4C /* PostNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewTask.swift; sourceTree = "<group>"; };
 		0046C8602436FCDA00090A6F /* BoardVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVController.swift; sourceTree = "<group>"; };
 		0046C8622436FFFB00090A6F /* BoardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardData.swift; sourceTree = "<group>"; };
 		00470524247EB8DC00592047 /* ScreenSizeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeChecker.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 		001BB3D8244276380006A52F /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
+				00469C30249C32A3005FEF4C /* PostNewTask */,
 				000890012453A6C500381526 /* TagListView */,
 				003F43AC24514D1000E29C79 /* AddingComment */,
 				0014BC0C244E658200D18601 /* Alert */,
@@ -499,6 +504,15 @@
 				0045D759243ED7860019C3FD /* OEMentions.swift */,
 			);
 			path = OEMensions;
+			sourceTree = "<group>";
+		};
+		00469C30249C32A3005FEF4C /* PostNewTask */ = {
+			isa = PBXGroup;
+			children = (
+				00469C31249C32FF005FEF4C /* PostNewTask.xib */,
+				00469C33249C3320005FEF4C /* PostNewTask.swift */,
+			);
+			path = PostNewTask;
 			sourceTree = "<group>";
 		};
 		004BB40324870F970064DE8F /* ScrollLabel */ = {
@@ -1047,6 +1061,7 @@
 				00CAECBD24601B26002E4495 /* Splash.storyboard in Resources */,
 				0075C8392438394400181F3D /* YNSliderCell.xib in Resources */,
 				001AC7F7244B0CE700E6F347 /* MentionsBody.xib in Resources */,
+				00469C32249C32FF005FEF4C /* PostNewTask.xib in Resources */,
 				0024FF02245E0AF800FC596F /* AddEmailInfo.xib in Resources */,
 				0024FEFB245E063900FC596F /* AddEmailInfoReplyView.xib in Resources */,
 				0075C8372438386E00181F3D /* YNExpandableCellEx.xib in Resources */,
@@ -1136,6 +1151,7 @@
 				00C98152243C82A0008F62BC /* CellAttachment.swift in Sources */,
 				00F7413F2436C53800749B4A /* UtilsAlert.swift in Sources */,
 				006A96B124564A3B00D3318E /* FileDownloader.swift in Sources */,
+				00469C34249C3320005FEF4C /* PostNewTask.swift in Sources */,
 				001BB3DD244276FF0006A52F /* AddEmailInfo.swift in Sources */,
 				001C179D24521E0D00E180F4 /* DownloadImgIWithLoader.swift in Sources */,
 				004CDD392441C14A001AEC9E /* Inbox.swift in Sources */,

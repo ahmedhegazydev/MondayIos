@@ -12,6 +12,7 @@ import SwiftyAvatar
 class CellUser: UITableViewCell {
 
     
+    @IBOutlet weak var imageSelected: UIImageView!
     @IBOutlet weak var ivUserPhoto: UIImageView!
     
     @IBOutlet weak var lblUserName: UILabel!

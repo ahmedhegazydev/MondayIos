@@ -8,6 +8,9 @@ target 'STask_IOS_APP' do
   
   #
   
+  pod 'Siren' # Swift 5.1+
+
+  
   
   # Pods for ImageSlider
   

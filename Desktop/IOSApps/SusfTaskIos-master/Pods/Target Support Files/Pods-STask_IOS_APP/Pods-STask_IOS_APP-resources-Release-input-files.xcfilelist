@@ -32,6 +32,7 @@ ${PODS_ROOT}/PDFReader/Sources/Assets/PDFReader.storyboard
 ${PODS_CONFIGURATION_BUILD_DIR}/PMAlertController/PMAlertController.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/PasswordTextField/PasswordTextField.bundle
 ${PODS_ROOT}/SSCustomTabbar/SSCustomTabBar/SwiftUI/SwiftUISupport.storyboard
+${PODS_ROOT}/Siren/Sources/Siren.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/SwiftMessages/SwiftMessages.bundle
 ${PODS_ROOT}/YNExpandableCell/YNExpandableCell/YNExpandableCell.xcassets
 ${PODS_ROOT}/YPImagePicker/Resources/ar.lproj

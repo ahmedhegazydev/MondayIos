@@ -150,6 +150,7 @@ PODS:
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
+  - Siren (5.4.4)
   - SkyFloatingLabelTextField (3.8.0)
   - SMIconLabel (0.5.0)
   - SnapKit (5.0.1)
@@ -210,6 +211,7 @@ DEPENDENCIES:
   - PMAlertController
   - RestEssentials (~> 5.1.0)
   - SDWebImage (~> 5.0)
+  - Siren
   - SkyFloatingLabelTextField (~> 3.0)
   - SMIconLabel
   - SnapKit (~> 5.0.0)
@@ -290,6 +292,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SDWebImage
+    - Siren
     - SkyFloatingLabelTextField
     - SMIconLabel
     - SnapKit
@@ -370,6 +373,7 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  Siren: 43ebf58c6593ed947a951ab6a03bdc413ffa371a
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SMIconLabel: 979cdbe5b1cda89bff21eeb3c8f4cbc2aad8e3b1
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -388,6 +392,6 @@ SPEC CHECKSUMS:
   YNExpandableCell: f71457eddc5f2d607de5a2aef545325b0b7622e4
   YPImagePicker: accf310f9526641a84372c0ecf943547d9b1e52c
 
-PODFILE CHECKSUM: 802a6e34a84e9816c6ecdc72beae0f5731a5931d
+PODFILE CHECKSUM: 37c09a4d1a278e7b61cbb465c1dff5e8ed2c1a6d
 
 COCOAPODS: 1.9.1

@@ -53,7 +53,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="ZEE-M5-8Wl">
-                                                        <rect key="frame" x="53" y="8" width="22" height="21"/>
+                                                        <rect key="frame" x="58" y="8" width="22" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="LzU-yY-w2e"/>
                                                             <constraint firstAttribute="height" constant="21" id="yOx-ok-bqc"/>
@@ -841,7 +841,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m0k-fb-1zf">
-                                                <rect key="frame" x="8" y="8" width="336" height="403"/>
+                                                <rect key="frame" x="8" y="8" width="336" height="339"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsF-U4-VLK">
                                                         <rect key="frame" x="0.0" y="0.0" width="336" height="34"/>
@@ -888,8 +888,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxC-6S-Pb6">
-                                                        <rect key="frame" x="0.0" y="349" width="336" height="54"/>
+                                                    <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxC-6S-Pb6">
+                                                        <rect key="frame" x="0.0" y="339" width="336" height="150"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-yc-n3O" customClass="TagListView" customModule="SUSF_TASK" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="150"/>
@@ -988,7 +988,7 @@
                         <outlet property="meetingLink" destination="TmU-6T-Kww" id="i0U-DI-cxb"/>
                         <outlet property="meetingTime" destination="B4v-Jz-jeV" id="8qU-Aw-uPj"/>
                         <outlet property="name" destination="MsF-U4-VLK" id="gEO-Fr-3Ai"/>
-                        <outlet property="selectedUsers" destination="k3C-Tu-mcx" id="FEn-XO-BdJ"/>
+                        <outlet property="selectedUsersTextField" destination="k3C-Tu-mcx" id="M0s-vU-zyg"/>
                         <outlet property="startDate" destination="sck-bt-gk9" id="zJS-WV-LO1"/>
                         <outlet property="status" destination="c7g-9K-HUV" id="ciS-gE-IBq"/>
                         <outlet property="tagsListView" destination="2kI-yc-n3O" id="XMT-1F-Hsd"/>

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Peter Bassem - Beyond Technology. All rights reserved.
 //
 
+import Siren
 import UIKit
 import Firebase
 import UserNotifications
@@ -92,6 +93,9 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
         
         
         
+        Siren.shared.wail() // Line 2
+
+        
         return true
     }
     
@@ -99,12 +103,12 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         
-        //        UIApplication.shared.applicationIconBadgeNumber = 0
+                UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         
-//                application.shared.applicationIconBadgeNumber = 0
+                UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -207,6 +211,8 @@ extension AppDelegate2 : UNUserNotificationCenterDelegate {
         //        guard let orderId = userInfo["type"] as? String else { return }
         //        self.orderId = orderId
         
+        UIApplication.shared.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1
+        
         let application = UIApplication.shared
         if application.applicationState == .active {
             openNotification(userInfo)
@@ -222,3 +228,5 @@ extension AppDelegate2 : UNUserNotificationCenterDelegate {
         completionHandler([.alert, .sound, .badge])
     }
 }
+
+
