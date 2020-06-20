@@ -43,10 +43,10 @@ class AttachmentsViewController: UIViewController, UINavigationControllerDelegat
     let headers: HTTPHeaders = [
         .accept("application/json"),
         .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
-         .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
-         .init(name: "tz", value: TimeZone.current.identifier)
-,
-         
+        .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
+        .init(name: "tz", value: TimeZone.current.identifier)
+        ,
+        
     ]
     lazy var refresher: UIRefreshControl = {
         let refresher = UIRefreshControl()
@@ -104,17 +104,17 @@ class AttachmentsViewController: UIViewController, UINavigationControllerDelegat
     override func viewWillDisappear(_ animated: Bool) {
         if let tabController = self.tabBarController{
             if let tabBar =  tabController as? SSCustomTabBar{
-        if tabBar.tag == 2 {
-            let movetoroot = true;
-            if movetoroot {
-                navigationController?.popToRootViewController(animated: true)
-            } else {
-                navigationController?.popViewController(animated: true)
+                if tabBar.tag == 2 {
+                    let movetoroot = true;
+                    if movetoroot {
+                        navigationController?.popToRootViewController(animated: true)
+                    } else {
+                        navigationController?.popViewController(animated: true)
+                    }
+                    tabBar.tag  = 0
+                }
             }
-            tabBar.tag  = 0
         }
-        }
-    }
     }
     
     
@@ -154,7 +154,7 @@ class AttachmentsViewController: UIViewController, UINavigationControllerDelegat
                                     //print(" dpsd = \(model.data![n].byShortName)")
                                     var att: Attachment = Attachment()
                                     let map: AttachmentData = model.data![n]
-//                                    att._id = map._id
+                                    //                                    att._id = map._id
                                     att.isPrivate = map.isPrivate
                                     att.isDelete = map.isDelete
                                     att.attachId = map.attachId
@@ -167,7 +167,7 @@ class AttachmentsViewController: UIViewController, UINavigationControllerDelegat
                                     att.byFullName = map.byFullName
                                     att.addDate = map.addDate
                                     att.byId = map.byId
-
+                                    
                                     attData.append(att)
                                 }
                                 self.attachments = attData
@@ -479,7 +479,7 @@ extension AttachmentsViewController: UITableViewDelegate{
         let currentUserId = Utils.fetchSavedUser().data.user.id
         print("XXxxXX = \(currentUserId)")
         print("XXxxXX \(self.attachments[indexPath.row].byId)")
-
+        
         if currentUserId != currentAttachtId {
             return UISwipeActionsConfiguration(actions: [])
         }else{
@@ -538,7 +538,7 @@ extension AttachmentsViewController: ImagePickerDelegate{
             .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
             .contentType("multipart/form-data"),
             .init(name: "tz", value: TimeZone.current.identifier)
-,
+            ,
             
         ]
         let url = Constants.BASE_URL +  Constants.Uplaoding.END_POINT_UPLOAD_FILE
@@ -634,8 +634,8 @@ extension AttachmentsViewController: ImagePickerDelegate{
             .accept("application/json"),
             .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
             //.contentType("application/json")
-                        .init(name: "tz", value: TimeZone.current.identifier)
-
+            .init(name: "tz", value: TimeZone.current.identifier)
+            
             
         ]
         let parameters: [String: Any] = [
@@ -844,7 +844,7 @@ extension AttachmentsViewController: ProtocolDownloadFile{
             .accept("application/json"),
             .authorization(bearerToken: (Utils.fetchSavedUser().data.token)),
             .init(name: "tz", value: TimeZone.current.identifier),
-   .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
+            .acceptLanguage(UserDefaults.standard.value(forKey: Constants.SELECTED_LANG) as! String),
             
         ]
         var id = attach?.attachId
@@ -878,31 +878,41 @@ extension AttachmentsViewController: ProtocolDownloadFile{
                 
         }
         .response { response in
-            self.view.hideToastActivity()
-            Loaf("Downloaded and saved successfully",
-                 state: .success, presentingDirection: .left,
-                 sender: self).show()
-            SwiftProgressBar.hideProgressBar()
+            
             if response.error == nil, let imagePath = response.fileURL?.path {
                 print("file exist \(imagePath)")
+                
+                
+                
+                //self.view.hideToastActivity()
+                //        Loaf("Downloaded and saved successfully",
+                //state: .success, presentingDirection: .left,
+                // sender: self).show()
+                SwiftProgressBar.hideProgressBar()
+                
+                
+                
                 //open the general folder
-                
-            
                 let fileBrowser = FileBrowser()
+                //fileBrowser.modalPresentationStyle = .overFullScreen
                 self.present(fileBrowser, animated: true, completion: nil)
+                //self.navigationController?.pushViewController(fileBrowser, animated: true)
                 
                 
-                if (self.isImage(name: (attach?.attachName)!)) {
-                    let image = UIImage(contentsOfFile: imagePath)
-                    //                    self.showImageAlert(image: image!)
-                }else{
-                    if (attach?.attachName?.contains("pdf"))! {
-                        //                        self.view.makeToast("Pdf")
-                        //                        let dc = UIDocumentInteractionController(url: URL(fileURLWithPath: imagePath))
-                        //                        dc.delegate = self
-                        //                        dc.presentPreview(animated: true)
-                    }
-                }
+                
+                //                if (self.isImage(name: (attach?.attachName)!)) {
+                //                    let image = UIImage(contentsOfFile: imagePath)
+                //                    //                    self.showImageAlert(image: image!)
+                //                }else{
+                //                    if (attach?.attachName?.contains("pdf"))! {
+                //                        //                        self.view.makeToast("Pdf")
+                //                        //                        let dc = UIDocumentInteractionController(url: URL(fileURLWithPath: imagePath))
+                //                        //                        dc.delegate = self
+                //                        //                        dc.presentPreview(animated: true)
+                //                    }
+                //                }
+                //
+                
             }
         }
     }
