@@ -12,6 +12,7 @@ import Firebase
 import UserNotifications
 import FirebaseMessaging
 import SSCustomTabbar
+//import MOLH
 
 
 @UIApplicationMain
@@ -36,7 +37,6 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         FirebaseApp.configure()
         UserDefaults.standard.setValue("ar", forKey: Constants.SELECTED_LANG)
@@ -78,28 +78,27 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
         
         application.isIdleTimerDisabled = true
         
-        
-        //        UserDefaults.standard.setValue("BOR388347926117524", forKey: Constants.DATA_BOARD_ID)
-        //        self.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        //
-        //                   let storyboard = UIStoryboard(name: "Board", bundle: .main)
-        //                   let vc = storyboard.instantiateViewController(identifier: "HomePage") as! SSCustomTabBarViewController
-        //        vc.selectedIndex = 0
-        //
-        //
-        //                   self.window = UIWindow(frame: UIScreen.main.bounds)
-        //                   self.window?.rootViewController = vc
-        //                   self.window?.makeKeyAndVisible()
-        
-        
-        
-        Siren.shared.wail() // Line 2
+     
+        Siren.shared.wail()
 
+               MOLHFont.shared.arabic = UIFont(name: "Courier", size: 13)!
+               MOLHLanguage.setDefaultLanguage("ar")
+               MOLH.shared.activate(true)
+               MOLH.shared.specialKeyWords = ["Cancel","Done"]
+               reset()
+        
+        
         
         return true
     }
     
     
+    
+    func reset() {
+        let rootViewController: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        rootViewController.rootViewController = story.instantiateViewController(withIdentifier: "loginVc")
+    }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         

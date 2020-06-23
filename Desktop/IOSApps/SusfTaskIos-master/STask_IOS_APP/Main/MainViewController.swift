@@ -11,7 +11,7 @@ import SSCustomTabbar
 import TextImageButton
 import Firebase
 import FirebaseDatabase
-import MOLH
+//import MOLH
 
 
 @available(iOS 13.0, *)
@@ -184,20 +184,11 @@ class MainViewController: UIViewController {
         
         alertControllerLang = UIAlertController(title: Constants.APP_NAME, message: "Select language", preferredStyle: .alert)
         
-        //               let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (alert: UIAlertAction!) -> Void in
-        //                   print("delete")
-        //               })
-        //
-        //               let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (alert: UIAlertAction!) -> Void in
-        //                   print("Cancel")
-        //               })
         
         let arabic = UIAlertAction(title: "Arabic", style: .default, handler: { (alert: UIAlertAction!) -> Void in
-            //self.changeLanguage()
             
-//            MOLH.setLanguageTo("ar")
-//            MOLH.reset()
-//            self.viewDidLoad()
+            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
             
             UserDefaults.standard.setValue("ar", forKey: Constants.SELECTED_LANG)
 
@@ -205,20 +196,17 @@ class MainViewController: UIViewController {
         })
         
         let english = UIAlertAction(title: "English", style: .default, handler: { (alert: UIAlertAction!) -> Void in
-            //self.changeLanguage()
+
+            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
             
-//            MOLH.setLanguageTo("en")
-//                       MOLH.reset()
-//            self.viewDidLoad()
             
             UserDefaults.standard.setValue("en", forKey: Constants.SELECTED_LANG)
 
         })
         
-        //               alertController.addAction(deleteAction)
         alertControllerLang!.addAction(arabic)
         alertControllerLang!.addAction(english)
-        //               alertController.addAction(maybeAction)
         
         self.present(alertControllerLang!, animated: true, completion: nil)
         

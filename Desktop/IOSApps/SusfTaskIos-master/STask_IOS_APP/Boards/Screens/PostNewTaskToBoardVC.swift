@@ -796,13 +796,14 @@ extension PostNewTaskToBoardVC: UITableViewDataSource {
                 user = self.users![indexPath.row]
             }
             cell!.lblUserName.text = user?.fullName
-            if (!(user?.userImage!.isEmpty)! && ((user?.userImage!.starts(with: "http"))! || ((user?.userImage!.starts(with: "https")) != nil))) {
+            if ( user?.userImage != nil  && !(user?.userImage!.isEmpty)! && ((user?.userImage!.starts(with: "http"))! || ((user?.userImage!.starts(with: "https")) != nil))) {
                 let url = URL(string: (user?.userImage!)!)
                 cell!.ivUserPhoto.kf.setImage(with: url)
             }else{
                 // Circle avatar image with white border
                 cell!.ivUserPhoto.image = Utils.letterAvatarImage(chars: (user?.shortName!)!)
             }
+                
         }
         return cell!
     }

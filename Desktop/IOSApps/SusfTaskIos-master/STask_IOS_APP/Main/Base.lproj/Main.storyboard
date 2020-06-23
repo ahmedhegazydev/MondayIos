@@ -16,9 +16,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxG-AU-zUi" customClass="TextImageButton" customModule="TextImageButton">
-                                <rect key="frame" x="16" y="20" width="48" height="115"/>
+                                <rect key="frame" x="16" y="20" width="111" height="115"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title=" Ar" image="language">
+                                <state key="normal" title="Language" image="language">
                                     <color key="titleColor" red="0.0" green="0.53212070469999995" blue="0.42213371399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -314,7 +314,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDx-pf-nAS" customClass="CardView2" customModule="SUSF_TASK" customModuleProvider="target">
                                 <rect key="frame" x="16" y="348" width="343" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YX5-B1-hl0">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YX5-B1-hl0">
                                         <rect key="frame" x="66.5" y="12" width="256.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="dOp-qV-Esw"/>
@@ -394,7 +394,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDI-x1-Wuc" customClass="CardView2" customModule="SUSF_TASK" customModuleProvider="target">
                                 <rect key="frame" x="16" y="406" width="343" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-58-QJ1">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ljb-58-QJ1">
                                         <rect key="frame" x="66.5" y="5" width="256.5" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="PoS-qe-YpM"/>
@@ -949,7 +949,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" catalog="system" width="32" height="32"/>
         <image name="email" width="20" height="16"/>
         <image name="language" width="24" height="24"/>
         <image name="line" width="0.5" height="30.5"/>

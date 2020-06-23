@@ -6,7 +6,7 @@
 "8BS-Oe-Qb3.text" = "Login in";
 
 /* Class = "UIButton"; normalTitle = " Arabic"; ObjectID = "DxG-AU-zUi"; */
-"DxG-AU-zUi.normalTitle" = " Arabic";
+"DxG-AU-zUi.normalTitle" = " Language";
 
 /* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "OsV-Se-4HC"; */
 "OsV-Se-4HC.placeholder" = "Enter your email";
@@ -22,3 +22,7 @@
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "w7t-AJ-eJG"; */
 "w7t-AJ-eJG.normalTitle" = "Login";
+
+"YX5-B1-hl0.placeholder" = "Enter email address";
+
+"XN8-l4-1UT.text" = "Forgot your password?";

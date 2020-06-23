@@ -54,6 +54,11 @@
 		0045D75B243ED7870019C3FD /* OEMentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045D759243ED7860019C3FD /* OEMentions.swift */; };
 		00469C32249C32FF005FEF4C /* PostNewTask.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00469C31249C32FF005FEF4C /* PostNewTask.xib */; };
 		00469C34249C3320005FEF4C /* PostNewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C33249C3320005FEF4C /* PostNewTask.swift */; };
+		00469C3D249DD78D005FEF4C /* MOLHLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C38249DD78D005FEF4C /* MOLHLanguage.swift */; };
+		00469C3E249DD78D005FEF4C /* MOLHSizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C39249DD78D005FEF4C /* MOLHSizable.swift */; };
+		00469C3F249DD78D005FEF4C /* MOLHFontLocalizableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C3A249DD78D005FEF4C /* MOLHFontLocalizableViews.swift */; };
+		00469C40249DD78D005FEF4C /* MOLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C3B249DD78D005FEF4C /* MOLH.swift */; };
+		00469C41249DD78D005FEF4C /* MOLHFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00469C3C249DD78D005FEF4C /* MOLHFont.swift */; };
 		0046C8612436FCDA00090A6F /* BoardVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046C8602436FCDA00090A6F /* BoardVController.swift */; };
 		0046C8632436FFFB00090A6F /* BoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046C8622436FFFB00090A6F /* BoardData.swift */; };
 		00470525247EB8DC00592047 /* ScreenSizeChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00470524247EB8DC00592047 /* ScreenSizeChecker.swift */; };
@@ -203,6 +208,11 @@
 		0045D75A243ED7870019C3FD /* OEMentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OEMentions.h; sourceTree = "<group>"; };
 		00469C31249C32FF005FEF4C /* PostNewTask.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostNewTask.xib; sourceTree = "<group>"; };
 		00469C33249C3320005FEF4C /* PostNewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewTask.swift; sourceTree = "<group>"; };
+		00469C38249DD78D005FEF4C /* MOLHLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHLanguage.swift; sourceTree = "<group>"; };
+		00469C39249DD78D005FEF4C /* MOLHSizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHSizable.swift; sourceTree = "<group>"; };
+		00469C3A249DD78D005FEF4C /* MOLHFontLocalizableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFontLocalizableViews.swift; sourceTree = "<group>"; };
+		00469C3B249DD78D005FEF4C /* MOLH.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLH.swift; sourceTree = "<group>"; };
+		00469C3C249DD78D005FEF4C /* MOLHFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOLHFont.swift; sourceTree = "<group>"; };
 		0046C8602436FCDA00090A6F /* BoardVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardVController.swift; sourceTree = "<group>"; };
 		0046C8622436FFFB00090A6F /* BoardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardData.swift; sourceTree = "<group>"; };
 		00470524247EB8DC00592047 /* ScreenSizeChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeChecker.swift; sourceTree = "<group>"; };
@@ -513,6 +523,18 @@
 				00469C33249C3320005FEF4C /* PostNewTask.swift */,
 			);
 			path = PostNewTask;
+			sourceTree = "<group>";
+		};
+		00469C37249DD77A005FEF4C /* MOLH */ = {
+			isa = PBXGroup;
+			children = (
+				00469C3B249DD78D005FEF4C /* MOLH.swift */,
+				00469C3C249DD78D005FEF4C /* MOLHFont.swift */,
+				00469C3A249DD78D005FEF4C /* MOLHFontLocalizableViews.swift */,
+				00469C38249DD78D005FEF4C /* MOLHLanguage.swift */,
+				00469C39249DD78D005FEF4C /* MOLHSizable.swift */,
+			);
+			path = MOLH;
 			sourceTree = "<group>";
 		};
 		004BB40324870F970064DE8F /* ScrollLabel */ = {
@@ -929,6 +951,7 @@
 		DC64243421B9B8A000BE5765 /* STask_IOS_APP */ = {
 			isa = PBXGroup;
 			children = (
+				00469C37249DD77A005FEF4C /* MOLH */,
 				0408368424833AEB005FCF30 /* SUSF TASK.entitlements */,
 				00CAECB724600799002E4495 /* Splash */,
 				000D25742457D4C400128702 /* NotificationManager */,
@@ -1130,6 +1153,7 @@
 				00C98155243C8490008F62BC /* ReplyViewController.swift in Sources */,
 				001AC7F9244B0CFC00E6F347 /* MentionBody.swift in Sources */,
 				00F7412B2436767E00749B4A /* MoreViewController.swift in Sources */,
+				00469C3E249DD78D005FEF4C /* MOLHSizable.swift in Sources */,
 				00088FFE24537FEC00381526 /* TagListView.swift in Sources */,
 				00CAECB62460077F002E4495 /* LaunchViewController.swift in Sources */,
 				00F7413C2436BCDE00749B4A /* Service.swift in Sources */,
@@ -1181,6 +1205,7 @@
 				0075C8302438183100181F3D /* YNTableViewExtenstion.swift in Sources */,
 				00DD641F2463E09900F7410D /* RegisterViewController.swift in Sources */,
 				0014BC12244E70F300D18601 /* HtmlDisply.swift in Sources */,
+				00469C3D249DD78D005FEF4C /* MOLHLanguage.swift in Sources */,
 				0052DAEF24428E40005782FD /* User.swift in Sources */,
 				0045D752243EA9250019C3FD /* cellMension.swift in Sources */,
 				001AC7FD244B274100E6F347 /* AddEmailInfoReplyView.swift in Sources */,
@@ -1197,6 +1222,8 @@
 				00F7412F24367F3000749B4A /* CellMore.swift in Sources */,
 				00BFF966243A75CE00A58CB9 /* GroupTaskCell.swift in Sources */,
 				0020AB6C246BB22900602627 /* AttachmentResponse.swift in Sources */,
+				00469C40249DD78D005FEF4C /* MOLH.swift in Sources */,
+				00469C41249DD78D005FEF4C /* MOLHFont.swift in Sources */,
 				00A2D9882447E4B8003971B0 /* StackBgColor.swift in Sources */,
 				00F741442436CAFC00749B4A /* NotificationData.swift in Sources */,
 				004CDD362441C0CA001AEC9E /* CellMail.swift in Sources */,
@@ -1210,6 +1237,7 @@
 				0038C2D1247C1BB100EF95DD /* DataNotifi.swift in Sources */,
 				00EA735024359CF90010C836 /* Utils.swift in Sources */,
 				0046C8612436FCDA00090A6F /* BoardVController.swift in Sources */,
+				00469C3F249DD78D005FEF4C /* MOLHFontLocalizableViews.swift in Sources */,
 				0040912D243B18F300DA7136 /* CellLetterAvatar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

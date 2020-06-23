@@ -42,8 +42,9 @@ struct NestedBoardH: Codable {
     let attachmentsGeneral: [Attachment]?
     let users: [UserHere]?
     let team: Team?
-    let description: JSONNullH?
-    
+//    let description: JSONNullH?
+    let description: String?
+
     
     enum CodingKeys: String, CodingKey {
         case id

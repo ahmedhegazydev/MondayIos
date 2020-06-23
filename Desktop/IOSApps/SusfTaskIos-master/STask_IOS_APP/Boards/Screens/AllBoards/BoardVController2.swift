@@ -15,6 +15,9 @@ import LUExpandableTableView
 import RestEssentials
 import SSCustomTabbar
 import Foundation
+import FileBrowser
+
+
 
 
 @available(iOS 13.0, *)
@@ -36,7 +39,7 @@ class BoardVController2: UIViewController{
         return refresher
     }()
     
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +54,25 @@ class BoardVController2: UIViewController{
         
         
         
-       
+        //        let addImage = UIImage(systemName: "plus")
+        let addImage = UIImage(named: "browse")
+        let addBarButtonItem = UIBarButtonItem(image: addImage, style: .done, target: self, action: #selector(openFileBrowser))
+        self.navigationItem.rightBarButtonItems  = [addBarButtonItem]
+        
+        
+        
     }
     
+    
+    @objc func openFileBrowser(){
+        
+        //open the general folder
+        let fileBrowser = FileBrowser()
+        //fileBrowser.modalPresentationStyle = .overFullScreen
+        self.present(fileBrowser, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(fileBrowser, animated: true)
+        
+    }
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,15 +86,15 @@ class BoardVController2: UIViewController{
         //        }
         
         
-//        self.view.makeToast("viewDidAppear")
-
+        //        self.view.makeToast("viewDidAppear")
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-//        self.view.makeToast("viewWillAppear")
-
+        //        self.view.makeToast("viewWillAppear")
+        
         
     }
     
@@ -92,50 +111,50 @@ class BoardVController2: UIViewController{
     
     func checkIfPushedFromNotificationVc(){
         if let tabBar = self.tabBarController!.tabBar as? SSCustomTabBar{
-        if tabBar.tag == 2{
-            print("tabbar tag = \(tabBar.tag)")
-            if let SAVED_USER_NOTIFI = UserDefaults.standard.object(forKey: Constants.SAVED_USER_NOTIFI) as? Data {
-                let decoder = JSONDecoder()
-                if let loadedNoti = try? decoder.decode(Notification.self, from: SAVED_USER_NOTIFI) {
-                    let id = loadedNoti.paramStr![0]
-                    //                    let id = loadedNoti.id
-                    print(loadedNoti.paramStr![0])
-                    tabBar.tag == 0//set to default
-                    let vc = self.storyboard?.instantiateViewController(identifier: "NestedViewController") as! NestedViewController2
-                    vc.boardId = id;
-                    self.navigationController?.pushViewController(vc, animated: true)
-                    
-                }
-            }else{
-                if let SAVED_USER_TASK = UserDefaults.standard.object(forKey: Constants.SAVED_USER_TASK) as? Data {
+            if tabBar.tag == 2{
+                print("tabbar tag = \(tabBar.tag)")
+                if let SAVED_USER_NOTIFI = UserDefaults.standard.object(forKey: Constants.SAVED_USER_NOTIFI) as? Data {
                     let decoder = JSONDecoder()
-                    if let loadedTask = try? decoder.decode(Task.self, from: SAVED_USER_TASK) {
-                        //                    let id = loadedTask.id
-                        //                    let id = loadedTask.taskID
-                        let id = loadedTask.boardId
-                        print("id_ooo = \(id)")
-                        //                    print(loadedTask.paramStr![0])
+                    if let loadedNoti = try? decoder.decode(Notification.self, from: SAVED_USER_NOTIFI) {
+                        let id = loadedNoti.paramStr![0]
+                        //                    let id = loadedNoti.id
+                        print(loadedNoti.paramStr![0])
                         tabBar.tag == 0//set to default
                         let vc = self.storyboard?.instantiateViewController(identifier: "NestedViewController") as! NestedViewController2
-                        vc.boardId = id!;
+                        vc.boardId = id;
                         self.navigationController?.pushViewController(vc, animated: true)
                         
                     }
+                }else{
+                    if let SAVED_USER_TASK = UserDefaults.standard.object(forKey: Constants.SAVED_USER_TASK) as? Data {
+                        let decoder = JSONDecoder()
+                        if let loadedTask = try? decoder.decode(Task.self, from: SAVED_USER_TASK) {
+                            //                    let id = loadedTask.id
+                            //                    let id = loadedTask.taskID
+                            let id = loadedTask.boardId
+                            print("id_ooo = \(id)")
+                            //                    print(loadedTask.paramStr![0])
+                            tabBar.tag == 0//set to default
+                            let vc = self.storyboard?.instantiateViewController(identifier: "NestedViewController") as! NestedViewController2
+                            vc.boardId = id!;
+                            self.navigationController?.pushViewController(vc, animated: true)
+                            
+                        }
+                    }
                 }
+                
+                
+                
+                
+            }else{
+                print("tabbar tag = \(tabBar.tag)")
+                
+                
+                
             }
-            
-            
-            
-            
-        }else{
-            print("tabbar tag = \(tabBar.tag)")
-            
-            
             
         }
         
-        }
-            
         if let boardId = UserDefaults.standard.string(forKey: Constants.DATA_BOARD_ID) {
             UserDefaults.standard.removeObject(forKey: Constants.DATA_BOARD_ID)
             

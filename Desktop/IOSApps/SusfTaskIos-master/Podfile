@@ -127,7 +127,7 @@ target 'STask_IOS_APP' do
   pod 'AttachmentPicker'
   pod 'PDFReader'
 
-  pod 'MOLH'
+#  pod 'MOLH'
   
   pod 'AttachmentInput'
 #  pod 'Pickle'
