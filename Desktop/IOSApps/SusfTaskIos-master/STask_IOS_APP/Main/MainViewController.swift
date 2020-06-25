@@ -63,8 +63,8 @@ class MainViewController: UIViewController {
         btnLang.titleLabel?.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "btn_select_lang", comment: "")
         
         
-        checkTheSwitchedFirebaseUrl()
-        checkTheRegisterButtonFlag()
+//        checkTheSwitchedFirebaseUrl()
+//        checkTheRegisterButtonFlag()
         
         
         let savedPerson =  Utils.fetchSavedUser()
@@ -187,9 +187,9 @@ class MainViewController: UIViewController {
         
         let arabic = UIAlertAction(title: "Arabic", style: .default, handler: { (alert: UIAlertAction!) -> Void in
             
-            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
-            
+//            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+//                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
+//
             UserDefaults.standard.setValue("ar", forKey: Constants.SELECTED_LANG)
 
             
@@ -197,9 +197,9 @@ class MainViewController: UIViewController {
         
         let english = UIAlertAction(title: "English", style: .default, handler: { (alert: UIAlertAction!) -> Void in
 
-            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
-                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
-            
+//            MOLH.setLanguageTo(MOLHLanguage.currentAppleLanguage() == "en" ? "ar" : "en")
+//                   MOLH.reset(transition: .transitionCrossDissolve, duration: 0.25)
+//
             
             UserDefaults.standard.setValue("en", forKey: Constants.SELECTED_LANG)
 

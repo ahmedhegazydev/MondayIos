@@ -81,12 +81,12 @@ class AppDelegate2: UIResponder, UIApplicationDelegate, MessagingDelegate {
      
         Siren.shared.wail()
 
-               MOLHFont.shared.arabic = UIFont(name: "Courier", size: 13)!
-               MOLHLanguage.setDefaultLanguage("ar")
-               MOLH.shared.activate(true)
-               MOLH.shared.specialKeyWords = ["Cancel","Done"]
-               reset()
-        
+//               MOLHFont.shared.arabic = UIFont(name: "Courier", size: 13)!
+//               MOLHLanguage.setDefaultLanguage("ar")
+//               MOLH.shared.activate(true)
+//               MOLH.shared.specialKeyWords = ["Cancel","Done"]
+//               reset()
+//        
         
         
         return true

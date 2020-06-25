@@ -59,15 +59,15 @@ class LaunchViewController: UIViewController {
             case .success(let value):
                 print("Task done for: \(value.source.url?.absoluteString ?? "")")
                 let deadLine = DispatchTime.now() + .milliseconds(2500)
-                                DispatchQueue.main.asyncAfter(deadline: deadLine) {
-                                    self.indicator.isHidden = true;
-                                    print("hop")
-                                    let main = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "loginVc")
-                                    main.modalPresentationStyle = .fullScreen
-                                    self.present(main, animated: true) {
-                
-                                    }
-                                }
+                DispatchQueue.main.asyncAfter(deadline: deadLine) {
+                    self.indicator.isHidden = true;
+                    print("hop")
+                    let main = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(identifier: "loginVc")
+                    main.modalPresentationStyle = .fullScreen
+                    self.present(main, animated: true) {
+                        
+                    }
+                }
                 break
             case .failure(let error):
                 print("Job failed: \(error.localizedDescription)")

@@ -23,16 +23,20 @@ struct Constants {
     
     static func getSwitchedBaseUrl() -> String{
         let defaults = UserDefaults.standard
-        let url: String = defaults.value(forKey: Constants.SELECTED_BASE_URL) as! String
-        if url != nil{
-            print("Selected base url = \(url)")
-//            return url
-            return "http://wayak.org/"
-//            return "https://mobile.susftask.com/"
-        }else{
-            print("nil gogo")
-        }
-        return "http://wayak.org/"
+//        let url: String = defaults.value(forKey: Constants.SELECTED_BASE_URL) as! String
+//        if url != nil{
+//            print("Selected base url = \(url)")
+////            return url
+//            return "http://wayak.org/"
+////            return "https://mobile.susftask.com/"
+//        }else{
+//            print("nil gogo")
+//        }
+        
+        
+        //return "http://wayak.org/"
+        return "https://mobile.susftask.com/"
+        
     }
     
     static let PRIVACY = "https://susftask.com/app/policy"

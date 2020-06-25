@@ -949,7 +949,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="32" height="32"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="email" width="20" height="16"/>
         <image name="language" width="24" height="24"/>
         <image name="line" width="0.5" height="30.5"/>
