@@ -41,9 +41,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
-        
-        self.privacyLabel.attributedText = NSAttributedString(string: "Privacy", attributes:
+        self.privacyLabel.attributedText = NSAttributedString(string: NSLocalizedString("privacy", comment: ""), attributes:
             [.underlineStyle: NSUnderlineStyle.single.rawValue])
         self.privacyLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleOnPrivacyClicked)))
         privacyLabel.isUserInteractionEnabled = true
@@ -66,9 +64,9 @@ class LoginViewController: UIViewController {
                                   for: .editingChanged)
         etEnterEmail.borderStyle = .none
         etEnterPassword.borderStyle = .none
-        etEnterEmail.attributedPlaceholder = NSAttributedString(string: "Email",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
-        etEnterPassword.attributedPlaceholder = NSAttributedString(string: "Password",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
-        
+//        etEnterEmail.attributedPlaceholder = NSAttributedString(string: "Email",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
+//        etEnterPassword.attributedPlaceholder = NSAttributedString(string: "Password",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
+//
         
         
         //        activityIndicatorView = NVActivityIndicatorView(frame: frame, type: type, color: color, padding: padding)
