@@ -64,9 +64,9 @@ class LoginViewController: UIViewController {
                                   for: .editingChanged)
         etEnterEmail.borderStyle = .none
         etEnterPassword.borderStyle = .none
-//        etEnterEmail.attributedPlaceholder = NSAttributedString(string: "Email",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
-//        etEnterPassword.attributedPlaceholder = NSAttributedString(string: "Password",attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
-//
+        etEnterEmail.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("login_enter_email", comment: ""),attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
+        etEnterPassword.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("login_enter_password", comment: ""),attributes: [NSAttributedString.Key.foregroundColor: Utils.hexStringToUIColor(hex: Constants.Colors.GREEN)])
+        
         
         
         //        activityIndicatorView = NVActivityIndicatorView(frame: frame, type: type, color: color, padding: padding)
@@ -188,16 +188,16 @@ class LoginViewController: UIViewController {
     
     func checkData(){
         if etEnterEmail.text!.isEmpty{
-            self.view.makeToast("Enter email address", duration: 3.0, position: .center)
+            self.view.makeToast(NSLocalizedString("required_enter_email", comment: ""), duration: 3.0, position: .center)
             
         }else{
             if !Utils.isValidEmail(email: etEnterEmail.text!){
-                self.view.makeToast("Enter valid email", duration: 3.0, position: .center)
+                self.view.makeToast(NSLocalizedString("required_enter_valid_email", comment: ""), duration: 3.0, position: .center)
                 
             }else{
                 
                 if etEnterPassword.text!.isEmpty{
-                    self.view.makeToast("Enter your password", duration: 3.0, position: .center)
+                    self.view.makeToast(NSLocalizedString("login_enter_password", comment: ""), duration: 3.0, position: .center)
                     
                 }
                 else{
@@ -324,7 +324,7 @@ class LoginViewController: UIViewController {
     func userForgotPassword(){
         
         if etEnterEmail.text!.isEmpty {
-            self.view.makeToast("Enter your email address")
+            self.view.makeToast(NSLocalizedString("required_enter_email", comment: ""))
             etEnterEmail.isError(baseColor:
                 //UIColor.gray.cgColor,
                 UIColor.red.cgColor,
@@ -335,7 +335,7 @@ class LoginViewController: UIViewController {
         }
         
         if !Utils.isValidEmail(email: etEnterEmail.text) {
-            self.view.makeToast("Enter valid email")
+            self.view.makeToast(NSLocalizedString("required_enter_valid_email", comment: ""))
             etEnterEmail.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
             return
         }

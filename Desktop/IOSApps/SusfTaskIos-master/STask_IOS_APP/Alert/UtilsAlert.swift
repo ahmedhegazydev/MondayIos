@@ -17,7 +17,7 @@ class UtilsAlert {
     
     static func  showError(message: String){
         let alert = CDAlertView(title: Constants.APP_NAME, message: message, type: .error)
-        let doneAction = CDAlertViewAction(title: "Okay")
+        let doneAction = CDAlertViewAction(title: NSLocalizedString("okay", comment: ""))
         alert.add(action: doneAction)
         alert.show()
         
@@ -25,7 +25,7 @@ class UtilsAlert {
     
     static func  showSuccess(message: String){
         let alert = CDAlertView(title: Constants.APP_NAME, message: message, type: .success)
-        let doneAction = CDAlertViewAction(title: "Okay")
+        let doneAction = CDAlertViewAction(title: NSLocalizedString("okay", comment: ""))
         alert.add(action: doneAction)
         alert.show()
         
@@ -34,7 +34,7 @@ class UtilsAlert {
     
     static func  showInfo(message: String){
         let alert = CDAlertView(title: Constants.APP_NAME, message: message, type: .notification)
-        let doneAction = CDAlertViewAction(title: "Okay")
+        let doneAction = CDAlertViewAction(title: NSLocalizedString("okay", comment: ""))
         alert.add(action: doneAction)
         alert.show()
         
@@ -45,7 +45,7 @@ class UtilsAlert {
             vc!,
             title: title!,
         text: text,
-        buttonText: "Ok"
+        buttonText:  NSLocalizedString("okay", comment: "")
         //color: UIColorFromHex(0x9b59b6, alpha: 1)
         )
         //alertview.addAction(myCallback) // Method to run after dismissal

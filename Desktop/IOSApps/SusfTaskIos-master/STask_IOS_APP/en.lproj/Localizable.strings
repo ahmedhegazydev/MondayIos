@@ -1,5 +1,30 @@
-
-
 "btn_select_lang" = " Arabic";
 "privacy" = "Privacy";
+"login_enter_email" = "Enter email address";
+"login_enter_password" = "Enter password";
+"required_enter_email" = "Enter email address";
+"required_enter_valid_email" = "Enter valid email";
+"enter_fname" = "Enter firstanme";
+"enter_lname" = "Enter lastname";
+"enter_phone" = "Enter phone number";
+"select_one_user_min" = "Select one recipient as minimu";
 
+"enter_title" = "Enter title";
+"enter_body" = "Enter body";
+"uploaded_success" = "The file uploaded successfully";
+
+"enter_comment_data" = "Enter comment data";
+"error_download" = "Error downloading file";
+
+"enter_comment" = "Error comment";
+
+"reply_add_success" = "Reply added successfully";
+"okay" = "Okay";
+"edit_profile" = "Edit profile";
+"enter_name" = "Enter fullname";
+"enter_status" = "Enter status";
+"enter_start_date" = "Enter statr date";
+"enter_end_date" = "Enter end date";
+"enter_meeting_link" = "Enter meeting link";
+"enter_valid_link" = "Enter valid meeting link";
+"enter_meet_time" = "Enter meeting time";

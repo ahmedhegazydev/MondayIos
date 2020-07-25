@@ -1,3 +1,28 @@
-
 "btn_select_lang" = " عربي";
 "privacy" = "الخصوصية والاستخدام";
+"login_enter_email" = "ادخل البريد الالكتروني";
+"login_enter_password" = "ادخل كلمه المرور";
+"required_enter_email" = "ادخل البريد الالكتروني";
+"required_enter_valid_email" = "ادخل بريد الكتروني صحيح";
+"enter_fname" = "ادخل الاسم الاول";
+"enter_lname" = "ادخل الاسم الاخير";
+"enter_phone" = "ادخل رقم المحمول";
+"select_one_user_min" = "اختار مرسل اليه واحد علي الاقل";
+"enter_title" = "ادخل العنوان";
+"enter_body" = "ادخل محتوي الرساله";
+"enter_comment_data" = "ادخل محتوي التعليق";
+"uploaded_success" = "تم تحميل الملف بنجاح";
+"error_download" = "حدث خطأ في تنزيل الملف";
+"enter_comment" = "ادخل التعليق";
+"reply_add_success" = "تم اضافه الرد بنجاح";
+"okay" = "تمام";
+"edit_profile" = "تعديل اللف الشخصي";
+
+"enter_name" = "ادخل الاسم بالكامل";
+"enter_status" = "ادخل الحاله";
+
+"enter_start_date" = "ادخل التاريخ كبدايه";
+"enter_end_date" = "ادخل التاريخ كنهايه";
+"enter_meeting_link" = "ادخل رابط المقابله";
+"enter_valid_link" = "ادخل رابط صحيح للمقابله";
+"enter_meet_time" = "ادخل وقت المقابله";

@@ -117,7 +117,9 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func btnEditProfile(_ sender: UIButton) {
-        self.view.makeToast("Edit Profile", duration: 3.0, position: .center)
+        self.view.makeToast(NSLocalizedString("edit_profile", comment: ""), duration: 3.0, position: .center)
+        
+        
     }
     
     

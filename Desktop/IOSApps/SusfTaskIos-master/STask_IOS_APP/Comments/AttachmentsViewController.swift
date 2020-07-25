@@ -706,7 +706,7 @@ extension AttachmentsViewController: ImagePickerDelegate{
                             //self.tableViewAttachments.reloadData()
                             
                             //UtilsAlert.showSuccess(message: "Uplaoded success")
-                            self.view.makeToast("Uploaded success")
+                            self.view.makeToast(NSLocalizedString("uploaded_success", comment: ""))
                             
                             UserDefaults.standard.set(try? PropertyListEncoder().encode(self.attachments), forKey: Constants.SAVED_ATTACHMENTS_TO_NESTED)
                             
@@ -795,7 +795,7 @@ extension AttachmentsViewController: ProtocolDownloadFile{
                         UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
                         self.showImageAlert(image: image!)
                     }else{
-                        self.view.makeToast("Error downloading image")
+                        self.view.makeToast(NSLocalizedString("error_download", comment: ""))
                     }
                 }
         }

@@ -127,25 +127,26 @@ class PostNewTaskToBoardVC: UIViewController {
     
         
         if name!.isEmpty {
-            self.view.makeToast("Enter name")
+            self.view.makeToast(NSLocalizedString("enter_name", comment: ""))
         }else{
             if statusId!.isEmpty {
-                self.view.makeToast("Enter status")
+                self.view.makeToast(NSLocalizedString("enter_status", comment: ""))
             }else{
                 if startDate!.isEmpty {
-                    self.view.makeToast("Enter start date")
+                    self.view.makeToast(NSLocalizedString("enter_start_date", comment: ""))
                 }else{
                     if dueDate!.isEmpty {
-                        self.view.makeToast("Enter end date")
+                        self.view.makeToast(NSLocalizedString("enter_end_date", comment: ""))
                     }else{
                         if meetingUrl!.isEmpty {
-                            self.view.makeToast("Enter meeting link")
+                            self.view.makeToast(NSLocalizedString("enter_meeting_link", comment: ""))
                         }else{
                             if !(meetingUrl?.isValidURL())! {
-                                self.view.makeToast("Enter valid meeting link")
+                                self.view.makeToast(NSLocalizedString("enter_valid_link", comment: ""))
+                                
                             }else{
                                 if meetingTime!.isEmpty {
-                                    self.view.makeToast("Enter meeting time")
+                                    self.view.makeToast(NSLocalizedString("enter_meet_time", comment: ""))
                                 }else{
                                     postNewTask()
                                 }

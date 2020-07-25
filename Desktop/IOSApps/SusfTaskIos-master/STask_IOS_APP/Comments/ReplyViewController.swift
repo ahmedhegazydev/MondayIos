@@ -402,7 +402,7 @@ class ReplyViewController: UIViewController
                             //                            //self.tableViewAttachments.reloadData()
                             
                             //UtilsAlert.showSuccess(message: "Uplaoded success")
-                            self.view.makeToast("Uploaded success")
+                            self.view.makeToast(NSLocalizedString("uploaded_success", comment: ""))
                         } catch let error {
                             print(error)
                         }
@@ -602,7 +602,7 @@ class ReplyViewController: UIViewController
         if !etEnterComment.text.isEmpty {
             sendComment()
         }else{
-            self.view.makeToast("Enter comment")
+            self.view.makeToast(NSLocalizedString("enter_comment", comment: ""))
         }
         
         
@@ -674,7 +674,7 @@ class ReplyViewController: UIViewController
 
                         do {
                             
-                            self.view.makeToast("Reply added successfully")
+                            self.view.makeToast(NSLocalizedString("reply_add_success", comment: ""))
                             
                             self.etEnterComment.text = ""
                             self.view.hideToastActivity()
@@ -1046,7 +1046,7 @@ extension ReplyViewController: UITableViewDelegate{
             self.alertWithTextField(title: Constants.APP_NAME, message: "Edit comment", placeholder: "Enter edit", text: cmt.commentData) { (comment) in
                 print(comment)
                 if comment.isEmpty{
-                    self.view.makeToast("Enter comment")
+                    self.view.makeToast(NSLocalizedString("enter_comment", comment: ""))
                     return
                 }
                 self.commentEdit(commentData: comment, comment: cmt, indexPath.row)

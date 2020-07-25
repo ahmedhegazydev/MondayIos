@@ -65,26 +65,26 @@ class RegisterViewController: UIViewController {
     
     func checkData(){
         if etFirstName.text!.isEmpty{
-            self.view.makeToast("Enter firstname", duration: 3.0, position: .center)
+            self.view.makeToast(NSLocalizedString("enter_fname", comment: ""), duration: 3.0, position: .center)
             etFirstName.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
             
         }else{
             if etLastName.text!.isEmpty{
-                self.view.makeToast("Enter lastname", duration: 3.0, position: .center)
+                self.view.makeToast(NSLocalizedString("enter_lname", comment: ""), duration: 3.0, position: .center)
                 etLastName.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
                 
             }else{
                 if etPhone.text!.isEmpty{
-                    self.view.makeToast("Enter phone", duration: 3.0, position: .center)
+                    self.view.makeToast(NSLocalizedString("enter_phone", comment: ""), duration: 3.0, position: .center)
                     etPhone.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
                 }else{
                     if !Utils.isValidEmail(email: etEmail.text!){
-                        self.view.makeToast("Enter valid email", duration: 3.0, position: .center)
+                        self.view.makeToast(NSLocalizedString("required_enter_valid_email", comment: ""), duration: 3.0, position: .center)
                         etEmail.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
                     }else{
                         
                         if etPassword.text!.isEmpty{
-                            self.view.makeToast("Enter your password", duration: 3.0, position: .center)
+                            self.view.makeToast(NSLocalizedString("login_enter_password", comment: ""), duration: 3.0, position: .center)
                             etPassword.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
                         }else{
                             self.createNewAccount()

@@ -47,21 +47,23 @@ class AddEmailInfoView: UIView{
         if let data = UserDefaults.standard.value(forKey: Constants.INBOX_SELECTED_RECIPIENTS) as? Data {
             let allRecipents = try? PropertyListDecoder().decode(Array<UserAll>.self, from: data)
             if allRecipents!.isEmpty {
-                self.makeToast("Select one recipient as minimu")
+                self.makeToast(NSLocalizedString("select_one_user_min", comment: ""))
+                
                 return
             }
         }else{
-            self.makeToast("Select one recipient as minimu")
+self.makeToast(NSLocalizedString("select_one_user_min", comment: ""))
+
             return
         }
         
         if etEnterTitle.text!.isEmpty{
-            self.makeToast("Enter title")
+            self.makeToast(NSLocalizedString("enter_title", comment: ""))
             return
         }
         
         if etEnterBody.text!.isEmpty{
-            self.makeToast("Enter body")
+            self.makeToast(NSLocalizedString("enter_body", comment: ""))
             return
         }
         

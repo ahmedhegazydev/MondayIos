@@ -358,7 +358,7 @@ class CommentsViewController: UIViewController {
                             //                            //self.tableViewAttachments.reloadData()
                             
                             //UtilsAlert.showSuccess(message: "Uplaoded success")
-                            self.view.makeToast("Uploaded success")
+                            self.view.makeToast(NSLocalizedString("uploaded_success", comment: ""))
                         } catch let error {
                             print(error)
                         }
@@ -1134,7 +1134,7 @@ extension CommentsViewController: ProtocolAddNewComment{
     func onPostComment() {
         print("on post comment")
         if (self.tvEnterComment?.text.isEmpty)! {
-            self.view.makeToast("Enter comment data")
+            self.view.makeToast(NSLocalizedString("enter_comment_data", comment: ""))
             return
         }
         self.addNewCommentMethod(comment: (self.tvEnterComment?.text)!)
