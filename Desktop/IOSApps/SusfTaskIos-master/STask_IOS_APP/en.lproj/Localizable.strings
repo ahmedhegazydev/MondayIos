@@ -24,3 +24,12 @@
 "enter_meeting_link" = "Enter meeting link";
 "enter_valid_link" = "Enter valid meeting link";
 "enter_meet_time" = "Enter meeting time";
+
+"TaskCellDateTop" = "Date: ";
+"TaskDateStart" = "Start Date: ";
+"FlowTitle" = "Flow Title: ";
+"TaskDateAdd" = "Add Date: ";
+
+"TaskMeetingUrl" = "Meeting Url: ";
+
+"TaskMeetingTime" = "M-Time: ";

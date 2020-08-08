@@ -24,6 +24,7 @@ class GroupTaskCell2: UITableViewCell {
     
     
     
+    @IBOutlet weak var ldlDateTop: UILabel!
     @IBOutlet weak var stackBottomSec: UIStackView!
     @IBOutlet weak var taskProgress: MBCircularProgressBarView!
     var delegate: DelegateGroupTaskCell?
@@ -63,6 +64,9 @@ class GroupTaskCell2: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
+        
+        self.ldlDateTop.text = NSLocalizedString("TaskCellDateTop", comment: "")
         
         self.stackBottomSec.addBackground(color: Utils.hexStringToUIColor(hex: "FAFAFA"))
         
@@ -115,10 +119,14 @@ class GroupTaskCell2: UITableViewCell {
     
     @objc func showMeetingTime(_ sender: UITapGestureRecognizer?){
         delegate?.showMeetingTime(task: self.task)
-        lblTaskInfoMainTitle.text = "M-Time:"
-        
+//        lblTaskInfoMainTitle.text = "M-Time:"
+        lblTaskInfoMainTitle.text = NSLocalizedString("TaskMeetingTime", comment: "")
+
         if task?.meetingTime != nil {
-           taskInfo.text = Utils.pureDateTime(dateBefore: task!.meetingTime!)
+//           taskInfo.text = Utils.pureDateTime(dateBefore: task!.meetingTime!)
+            taskInfo.text = ((task!.meetingTime!)) + " " + Utils.convert24To12(task!.meetingTimeTime)
+                  
+            
         } else {
             taskInfo.text = ""
         }
@@ -138,32 +146,43 @@ class GroupTaskCell2: UITableViewCell {
     
     @objc func showMeetingUrl(_ sender: UITapGestureRecognizer?){
         delegate?.showShowMeetingUrl(task: self.task)
-        lblTaskInfoMainTitle.text = "Meeting Url:"
+//        lblTaskInfoMainTitle.text = "Meeting Url:"
+        lblTaskInfoMainTitle.text = NSLocalizedString("TaskMeetingUrl", comment: "")
+
         taskInfo.text = task?.meetingUrl
         
     }
     
     @objc func showAddDate(_ sender: UITapGestureRecognizer?){
         delegate?.showAddDate(task: self.task)
-        lblTaskInfoMainTitle.text = "Add Date:"
+//        lblTaskInfoMainTitle.text = "Add Date:"
+        lblTaskInfoMainTitle.text = NSLocalizedString("TaskDateAdd", comment: "")
+
 //        taskInfo.text = Utils.pureDate(dateBefore: task!.addDate)
-        taskInfo.text = Utils.pureDateTime(dateBefore: task!.addDate)
-        
-        
+//        taskInfo.text = Utils.pureDateTime(dateBefore: task!.addDate)
+        taskInfo.text = ((task!.addDate)) + " " + Utils.convert24To12(task!.addDateTime)
+
+
+
     }
     
     @objc func showStartDate(_ sender: UITapGestureRecognizer?){
         delegate?.showStartDate(task: self.task)
-        lblTaskInfoMainTitle.text = "Start Date:"
+        lblTaskInfoMainTitle.text = NSLocalizedString("TaskDateStart", comment: "")
+        
 //        taskInfo.text = Utils.pureDate(dateBefore: task!.startDate)
-        taskInfo.text = Utils.pureDateTime(dateBefore: task!.startDate)
+//        taskInfo.text = Utils.pureDateTime(dateBefore: task!.startDate)
+        taskInfo.text = ((task!.startDate)) + " " + Utils.convert24To12(task!.startDateTime)
+
+
 
     }
     
     @objc func showDueDate(_ sender: UITapGestureRecognizer?){
         delegate?.showDueDate(task: self.task)
 //        lblTaskInfoMainTitle.text = "Due Date:"
-         lblTaskInfoMainTitle.text = "Flow Title:"
+         lblTaskInfoMainTitle.text = NSLocalizedString("FlowTitle", comment: "")
+        
 //        taskInfo.text = Utils.pureDate(dateBefore: task!.dueDate)
         taskInfo.text = task?.flowTitle
         

@@ -351,6 +351,7 @@
                 <outlet property="ivStartDate" destination="0E2-yJ-zrZ" id="tdh-Lp-0sY"/>
                 <outlet property="ivUsers" destination="KEo-2g-dit" id="CnC-Hf-yAf"/>
                 <outlet property="lblTaskInfoMainTitle" destination="tur-Ep-beg" id="zTL-yP-xyY"/>
+                <outlet property="ldlDateTop" destination="6N4-Gd-OiW" id="lzu-G8-gcL"/>
                 <outlet property="stackBottomSec" destination="i2B-2x-uZj" id="x0D-pO-6si"/>
                 <outlet property="taskDate" destination="2Fj-ji-PlF" id="DQR-KL-FGI"/>
                 <outlet property="taskInfo" destination="vgP-mF-TnM" id="Aiz-Ta-yZa"/>

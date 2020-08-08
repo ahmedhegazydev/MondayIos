@@ -663,7 +663,7 @@ extension NestedViewController2: UITableViewDataSource {
         cell?.taskStatus.layer.masksToBounds = true
         cell?.taskStatus.textAlignment = .center
         
-        cell?.lblTaskInfoMainTitle.text = "Start Date:"
+        cell?.lblTaskInfoMainTitle.text = NSLocalizedString("TaskDateStart", comment: "")
         //cell?.taskInfo.text = Utils.pureDate(dateBefore: task!.startDate)
 //        cell?.taskInfo.text = Utils.pureDateTime(dateBefore: task!.startDate)
         cell?.taskInfo.text = task!.startDate + " " + Utils.convert24To12(task!.startDateTime)

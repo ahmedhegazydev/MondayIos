@@ -23,6 +23,12 @@
 
 "enter_start_date" = "ادخل التاريخ كبدايه";
 "enter_end_date" = "ادخل التاريخ كنهايه";
-"enter_meeting_link" = "ادخل رابط المقابله";
-"enter_valid_link" = "ادخل رابط صحيح للمقابله";
-"enter_meet_time" = "ادخل وقت المقابله";
+"enter_meeting_link" = "ادخل رابط الاجتماع";
+"enter_valid_link" = "ادخل رابط صحيح للاجتماع";
+"enter_meet_time" = "ادخل وقت الاجتماع";
+"TaskCellDateTop" = "التاريخ: ";
+"TaskDateStart" = "تاريخ البدايه: ";
+"FlowTitle" = "الخطوه الحاليه: ";
+"TaskDateAdd" = "تاريخ الاضافه: ";
+"TaskMeetingUrl" = "لينك الاجتماع: ";
+"TaskMeetingTime" = "M-وقت: ";
