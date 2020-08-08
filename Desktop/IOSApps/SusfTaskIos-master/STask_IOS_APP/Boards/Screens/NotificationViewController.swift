@@ -306,7 +306,10 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             cell.lblNotifiData.text = notification?.msg
             cell.lblUserName.text = notification?.byName?.capitalized
             //            cell.lblDate.text = Utils.pureDate(dateBefore: (notification?.time)!)
-            cell.lblDate.text = Utils.pureDateTime(dateBefore: (notification?.time)!)
+//            cell.lblDate.text = Utils.pureDateTime(dateBefore: (notification?.time)!)
+            cell.lblDate.text = ((notification?.time!)!) + " " + Utils.convert24To12(notification?.timeTime)
+            
+                                 
             //            let url  = URL(string: notification.u)
             //            cell.ivUserImage.kf.setImage(with: url)
             
@@ -348,7 +351,11 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             task = self.tasks[indexPath.row]
             cell.lblNotifiData.text = task?.name
             cell.lblUserName.text = task?.name?.capitalized
-            cell.lblDate.text = Utils.pureDateTime(dateBefore: (task?.dueDate)!)
+//            cell.lblDate.text = Utils.pureDateTime(dateBefore: (task?.dueDate)!)
+            cell.lblDate.text = ((task?.dueDate!)!) + " " + Utils.convert24To12(task?.dueDateTime)
+            
+            
+            
             cell.viewColor.isHidden = true;
 //            cell.ivUserImage.image = UIImage(named: "noti5")
             cell.ivUserImage.image =  UIImage(named: "noti3")

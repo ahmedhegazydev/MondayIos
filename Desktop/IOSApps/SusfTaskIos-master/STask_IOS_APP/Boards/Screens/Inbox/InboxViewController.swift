@@ -766,7 +766,11 @@ extension InboxViewController: UITableViewDataSource{
             emailCell.lblComment.text = mail.body.htmlToString
             //            emailCell.lblComment.text = "If you aren’t using styled text, this property applies to the entire text string in the text property. If you’re using styled text, assigning a new value to this property applies the line break mode to the entirety of the string in the attributedText property. To apply the line break"
             emailCell.ivShowAttachments.isHidden = true;
-            emailCell.lblDate.text = Utils.pureDateTime(dateBefore: mail.createdAt)
+//            emailCell.lblDate.text = Utils.pureDateTime(dateBefore: mail.createdAt)
+            emailCell.lblDate.text = (mail.createdAt) + " " + Utils.convert24To12(mail.createdAtTime)
+            
+            
+            
             if flagSentOrInbox {
                 //inbox
                 emailCell.ivReply.isHidden = false;

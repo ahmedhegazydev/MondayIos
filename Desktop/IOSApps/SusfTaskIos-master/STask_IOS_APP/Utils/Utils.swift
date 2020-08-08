@@ -100,18 +100,25 @@ class  Utils {
     }
     
     
-    static func convert24To12(_ dateAsString: String) -> String{
+    static func convert24To12(_ dateAsString: String?) -> String{
+        let Date12: String = ""
+        if  dateAsString != nil && dateAsString != ""{
+        print("fofosd = \(dateAsString)")
         //let dateAsString = "13:15"
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateFormat = "HH:mm:ss"
+//        dateFormatter.dateFormat = "HH:mm"
+
 //        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
-        let date = dateFormatter.date(from: dateAsString)
-        dateFormatter.dateFormat = "h:mm a"
-        
+            let date = dateFormatter.date(from: dateAsString!)
+        dateFormatter.dateFormat = "hh:mm:ss a"
+//        dateFormatter.dateFormat = "hh:mm a"
+
         
         let Date12 = dateFormatter.string(from: date!)
         print("12 hour formatted Date:",Date12)
+        }
         return Date12
     }
     

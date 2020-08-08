@@ -16,6 +16,8 @@ struct Reply: Codable {
 struct DataElementReply: Codable {
 //    let _id: String?
     let addDate, updateDate: String?
+    let  addDateTime: String?
+
     let isDelete: Bool?
     let commentId: String?
     //let byId: ID?
@@ -30,15 +32,20 @@ struct DataElementReply: Codable {
     let nestedComments: [Comment]?
     let usersmentionId: [UsersmentionID]?
     let deleteDate: String?
-    
+    let deleteDateTime: String?
+
     enum CodingKeys: String, CodingKey {
 //        case _id
         case addDate, updateDate, isDelete
+        case addDateTime
+
         case commentId
         case byId
         case byUserName, byShortName, byUserImage, byFullName, commentData, attachments, nestedComments
         case usersmentionId
         case deleteDate
+        case deleteDateTime
+
     }
 }
 

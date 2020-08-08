@@ -74,6 +74,8 @@ struct Attachment: Codable {
     var byUserImage: String?
     var byFullName: String?
     var addDate: String?
+    var addDateTime: String?
+
     var isDelete: Bool?
     
     //    init(attachId: String, attachName: String, attachKey: String,
@@ -102,6 +104,8 @@ struct Attachment: Codable {
         self.byUserImage = ""
         self.byFullName = ""
         self.addDate = ""
+        self.addDateTime = ""
+
 //        self._id = ""
         self.byId = ""
         self.isDelete = false
@@ -118,6 +122,8 @@ struct Attachment: Codable {
         case byId
         case byUserName, byShortName, byUserImage, byFullName, addDate
         case isDelete
+        case addDateTime
+
     }
 }
 
@@ -147,13 +153,22 @@ struct TasksGroup: Codable {
 struct TaskH: Codable {
     let id: String
     let isPrivate: Bool
-    let addDate: String
     let progressValue: Int
     let isDelete: Bool
 //    let _id: String
     let name: String
     let status: Status
-    let startDate, dueDate: String
+    
+    let startDate: String
+    let dueDate: String
+    let addDate: String
+ let meetingTime: String?
+    
+    let startDateTime: String
+       let dueDateTime: String
+       let addDateTime: String
+    let meetingTimeTime: String?
+    
     //let ownerId: ID?
     let ownerId: String?
     let assignee: [UserHere]
@@ -161,7 +176,7 @@ struct TaskH: Codable {
     let extraData: [JSONAny]
     let comments: [Comment]?
     let meetingUrl: String?
-    let meetingTime: String?
+   
     let flowTitle: String?
     let flowPercentage: Int?
     let flowStep: Int?
@@ -174,11 +189,18 @@ struct TaskH: Codable {
         case id
         case isPrivate, addDate, progressValue, isDelete
 //        case _id
+        case addDateTime
+        
         case name, status, startDate, dueDate
+       case startDateTime, dueDateTime
+
         case ownerId
         case assignee, attachments, extraData, comments
         case meetingUrl
+        
         case meetingTime
+        case meetingTimeTime
+
         case flowTitle
         case flowPercentage
         case flowStep
@@ -222,6 +244,8 @@ public struct UserHere: Codable {
 struct Comment: Codable {
 //    var _id: String?
     var addDate, updateDate: String?
+    var addDateTime, updateDateTime: String?
+
     let isDelete: Bool?
     var commentId: String?
     var byId: String?
@@ -234,10 +258,14 @@ struct Comment: Codable {
     let nestedComments: [Comment]?
     var usersmentionId: [UsersmentionID]?
     var deleteDate: String?
+    var deleteDateTime: String?
+
     init() {
 //        self._id = ""
         self.addDate = ""
         self.updateDate = ""
+        self.addDateTime = ""
+              self.updateDateTime = ""
         self.isDelete = false
         self.commentId = ""
         self.byId = ""
@@ -250,17 +278,22 @@ struct Comment: Codable {
         self.nestedComments =  []
         self.usersmentionId =  []
         self.deleteDate = ""
-        
+        self.deleteDateTime = ""
+
     }
     
     enum CodingKeys: String, CodingKey {
 //        case _id
         case addDate, updateDate, isDelete
+        case addDateTime, updateDateTime
+
         case commentId
         case byId
         case byUserName, byShortName, byUserImage, byFullName, commentData, attachments, nestedComments
         case usersmentionId
         case deleteDate
+        case deleteDateTime
+
     }
 }
 

@@ -841,10 +841,14 @@ extension CommentsViewController: UITableViewDataSource{
             
         }
         
-        let date: String? = Utils.pureDateTime(dateBefore: cmt.addDate!)
+//        let date: String? = Utils.pureDateTime(dateBefore: cmt.addDate!)
+        let date: String? = cmt.addDate! + " " + Utils.convert24To12(cmt.addDateTime!)
+        
+        
+        
         cell.lblDate.text = date
         
-        
+                
         
         
         return cell;

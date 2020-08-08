@@ -392,7 +392,6 @@ class NestedViewController2: UIViewController {
         //        indicator.startAnimating()
     }
     
-    
     func openLinkAlertAction(link: String) {
         
         
@@ -645,7 +644,9 @@ extension NestedViewController2: UITableViewDataSource {
         
         //cell?.taskDate.text = Utils.pureDate(dateBefore: task!.startDate)
         //        cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.startDate)
-        cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.dueDate)
+//        cell?.taskDate.text = Utils.pureDateTime(dateBefore: task!.dueDate)
+        
+         cell?.taskDate.text = task!.dueDate + " " + Utils.convert24To12(task!.dueDateTime)
         
         
         let progressVal: Float = Float(task!.progressValue) / Float(100)
@@ -664,7 +665,11 @@ extension NestedViewController2: UITableViewDataSource {
         
         cell?.lblTaskInfoMainTitle.text = "Start Date:"
         //cell?.taskInfo.text = Utils.pureDate(dateBefore: task!.startDate)
-        cell?.taskInfo.text = Utils.pureDateTime(dateBefore: task!.startDate)
+//        cell?.taskInfo.text = Utils.pureDateTime(dateBefore: task!.startDate)
+        cell?.taskInfo.text = task!.startDate + " " + Utils.convert24To12(task!.startDateTime)
+        
+        print("eroere = \(task?.startDate)  \(Utils.convert24To12(task!.startDateTime))")
+        
         
         
     }

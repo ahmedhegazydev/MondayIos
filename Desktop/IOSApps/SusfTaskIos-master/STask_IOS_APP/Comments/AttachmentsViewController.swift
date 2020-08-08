@@ -411,7 +411,13 @@ extension AttachmentsViewController: UITableViewDataSource{
         
         cell.labelFileName.text = attachment.attachName
         //cell.lblDate.text = Utils.pureDate(dateBefore: (attachment?.addDate)!)
-        cell.lblDate.text = Utils.pureDateTime(dateBefore: (attachment.addDate)!)
+//        cell.lblDate.text = Utils.pureDateTime(dateBefore: (attachment.addDate)!)
+        
+        
+        cell.lblDate.text = attachment.addDate! + " " + Utils.convert24To12(attachment.addDateTime!)
+         
+        
+        
         cell.lblByName.text = attachment.byFullName
         
         if indexPath.row == attachments.count - 1 {

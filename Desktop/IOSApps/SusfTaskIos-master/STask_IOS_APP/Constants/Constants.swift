@@ -34,8 +34,9 @@ struct Constants {
 //        }
         
         
-        //return "http://wayak.org/"
-        return "https://mobile.susftask.com/"
+        return "http://wayak.org/"
+//        return "https://mobile.susftask.com/"
+        
         
     }
     

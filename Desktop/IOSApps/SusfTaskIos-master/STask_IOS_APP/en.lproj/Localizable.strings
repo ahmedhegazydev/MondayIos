@@ -8,16 +8,12 @@
 "enter_lname" = "Enter lastname";
 "enter_phone" = "Enter phone number";
 "select_one_user_min" = "Select one recipient as minimu";
-
 "enter_title" = "Enter title";
 "enter_body" = "Enter body";
 "uploaded_success" = "The file uploaded successfully";
-
 "enter_comment_data" = "Enter comment data";
 "error_download" = "Error downloading file";
-
 "enter_comment" = "Error comment";
-
 "reply_add_success" = "Reply added successfully";
 "okay" = "Okay";
 "edit_profile" = "Edit profile";

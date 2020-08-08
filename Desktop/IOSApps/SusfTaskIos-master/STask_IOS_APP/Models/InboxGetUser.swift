@@ -16,6 +16,8 @@ struct InboxGetUser: Codable {
     let toUsers: [ToUser]
     let attachments: [JSONAny]
     let createdAt, id: String
+    let createdAtTime: String
+
 }
 
 // MARK: - FromUser

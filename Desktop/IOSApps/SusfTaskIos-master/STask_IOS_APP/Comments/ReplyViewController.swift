@@ -88,7 +88,10 @@ class ReplyViewController: UIViewController
         
         //access fields
         labelUserName.text = comment?.byUserName
-        lblDate.text = Utils.pureDateTime(dateBefore: (comment?.addDate)!)
+//        lblDate.text = Utils.pureDateTime(dateBefore: (comment?.addDate)!)
+        lblDate.text = (comment?.addDate!)! + " " + Utils.convert24To12(comment?.addDateTime!)
+
+        
        if let image = self.comment!.byUserImage{
             if (!(image.isEmpty) && ((image.starts(with: "http")) || ((image.starts(with: "https")) != nil))) {
                 let url = URL(string: image)
@@ -971,7 +974,10 @@ extension ReplyViewController: UITableViewDataSource{
         cell.lblUserName.text = comment?.byFullName
         //        cell.lblDate.text = Utils.pureDate(dateBefore: (comment?.addDate)!)
         //        cell.lblTime.text = Utils.pureTime(dateBefore: (comment?.addDate)!)
-        cell.lblDate.text = Utils.pureDateTime(dateBefore: (comment?.addDate)!)
+//        cell.lblDate.text = Utils.pureDateTime(dateBefore: (comment?.addDate)!)
+        cell.lblDate.text = (comment?.addDate!)! + " " + Utils.convert24To12(comment?.addDateTime!)
+        
+        
         if let image =  comment?.byUserImage{
             if (!(image.isEmpty) && ((image.starts(with: "http")) || ((image.starts(with: "https")) != nil))) {
                 let url = URL(string: image)

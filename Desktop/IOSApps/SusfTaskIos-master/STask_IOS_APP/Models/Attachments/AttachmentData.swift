@@ -23,9 +23,10 @@ struct AttachmentData: Mappable {
     var byShortName: String?
     var byUserImage: String?
     var byFullName: String?
-    var addDate: String?
     
-   
+    var addDate: String?
+   var addDateTime: String?
+
     
     init?(map: Map) {
         
@@ -46,6 +47,10 @@ struct AttachmentData: Mappable {
         byUserImage <- map["byUserImage"]
         byFullName <- map["byFullName"]
         addDate <- map["addDate"]
+        addDateTime <- map["addDateTime"]
+
+        
+        
     }
     
     
