@@ -39,6 +39,8 @@
 		0024FEFB245E063900FC596F /* AddEmailInfoReplyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0024FEFD245E063900FC596F /* AddEmailInfoReplyView.xib */; };
 		0024FF02245E0AF800FC596F /* AddEmailInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0024FF04245E0AF800FC596F /* AddEmailInfo.xib */; };
 		0038C2D1247C1BB100EF95DD /* DataNotifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038C2D0247C1BB100EF95DD /* DataNotifi.swift */; };
+		00391FBC24E8798800A127EA /* SubBoradCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00391FBB24E8798800A127EA /* SubBoradCell.xib */; };
+		00391FBE24E879AB00A127EA /* SubBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00391FBD24E879AB00A127EA /* SubBoardCell.swift */; };
 		003F43AE24514D2E00E29C79 /* PostNewComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003F43AD24514D2E00E29C79 /* PostNewComment.swift */; };
 		003F43B024514D6C00E29C79 /* PostNewComment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003F43AF24514D6C00E29C79 /* PostNewComment.xib */; };
 		0040912D243B18F300DA7136 /* CellLetterAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0040912B243B18F300DA7136 /* CellLetterAvatar.swift */; };
@@ -192,6 +194,8 @@
 		002EB28124584C4500DB8924 /* libFirebaseFirestore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseFirestore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		002EB28324584C7100DB8924 /* libFirebaseFirestore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseFirestore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0038C2D0247C1BB100EF95DD /* DataNotifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNotifi.swift; sourceTree = "<group>"; };
+		00391FBB24E8798800A127EA /* SubBoradCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubBoradCell.xib; sourceTree = "<group>"; };
+		00391FBD24E879AB00A127EA /* SubBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBoardCell.swift; sourceTree = "<group>"; };
 		003F43AD24514D2E00E29C79 /* PostNewComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewComment.swift; sourceTree = "<group>"; };
 		003F43AF24514D6C00E29C79 /* PostNewComment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostNewComment.xib; sourceTree = "<group>"; };
 		0040912B243B18F300DA7136 /* CellLetterAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLetterAvatar.swift; sourceTree = "<group>"; };
@@ -659,6 +663,8 @@
 				0075C84024383D0900181F3D /* BoardSectionHeader.swift */,
 				0075C83F24383D0900181F3D /* BoardCell.swift */,
 				00F265112444579400788E63 /* BoardCell.xib */,
+				00391FBB24E8798800A127EA /* SubBoradCell.xib */,
+				00391FBD24E879AB00A127EA /* SubBoardCell.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -1070,6 +1076,7 @@
 				004CDD372441C0CA001AEC9E /* CellMail.xib in Resources */,
 				003F43B024514D6C00E29C79 /* PostNewComment.xib in Resources */,
 				DC64243B21B9B8A000BE5765 /* Main.storyboard in Resources */,
+				00391FBC24E8798800A127EA /* SubBoradCell.xib in Resources */,
 				0044E3DD243F3AE2004D3064 /* CellCommentWithoutReply.xib in Resources */,
 				00BFF96B243A953700A58CB9 /* GroupSectionHeader.xib in Resources */,
 				00FABD87244522B9000423D3 /* GroupSectionHeader2.xib in Resources */,
@@ -1150,6 +1157,7 @@
 				0008900024537FEC00381526 /* CloseButton1.swift in Sources */,
 				00DE44FE244F19B20056ABD3 /* ValidationTF.swift in Sources */,
 				003F43AE24514D2E00E29C79 /* PostNewComment.swift in Sources */,
+				00391FBE24E879AB00A127EA /* SubBoardCell.swift in Sources */,
 				00C98155243C8490008F62BC /* ReplyViewController.swift in Sources */,
 				001AC7F9244B0CFC00E6F347 /* MentionBody.swift in Sources */,
 				00F7412B2436767E00749B4A /* MoreViewController.swift in Sources */,

@@ -140,6 +140,8 @@ extension SSCustomTabBarViewController {
     ///   - item: The tab bar item that was selected.
     override public func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
+        print("tabbed")
+        
         if let uSelf = self.tabBar as? SSCustomTabBar, let items = uSelf.items, let index = items.firstIndex(of: item), index != self.priviousSelectedIndex {
             
             let width = UIScreen.main.bounds.width/CGFloat(items.count)
@@ -159,9 +161,20 @@ extension SSCustomTabBarViewController {
                     UIView.animate(withDuration: 0.9, delay: 0.0, usingSpringWithDamping: 0.57, initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
                         objectView.frame = CGRect(x: objectView.frame.origin.x, y: objectView.frame.origin.y + self.kUpAnimationPoint, width: objectView.frame.width, height: objectView.frame.height)
                     }, completion: nil)
+                    
+                    
                 }
             })
             self.priviousSelectedIndex = index
+            
+            let currentLang = Locale.current.languageCode
+//            print("currentLang = \(currentLang)")
+            if currentLang == "ar" {
+                print("currentLang = \(currentLang)")
+            }else{
+                
+            }
+            
             performSpringAnimation(for: orderedTabBarItemViews[index], changeValue: changeValue)
         }
         

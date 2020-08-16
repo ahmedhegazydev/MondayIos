@@ -205,12 +205,16 @@ extension SSCustomTabBar {
     func setDefaultlayoutControlPoints(waveHeight: CGFloat, locationX: CGFloat) {
         
         let width = (UIScreen.main.bounds.width/CGFloat(self.items?.count ?? 0))
+        print("width_0323 = \(width)")
+        
         leftPoint4.center = CGPoint(x: 0, y: minimalY+minimalHeight)
         rightPoint4.center = CGPoint(x: self.bounds.width, y: minimalY+minimalHeight)
+        
         
         let imaganaeryFram = CGRect(x: locationX-(width/2), y: minimalY, width: width, height: minimalHeight)
         
         leftPoint3.center = CGPoint(x: imaganaeryFram.minX, y: imaganaeryFram.maxY)
+        
         
         
         let topOffset: CGFloat = imaganaeryFram.width / 4.3

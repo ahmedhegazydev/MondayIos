@@ -1,21 +1,20 @@
 //
-//  MyTableViewCell.swift
-//  LUExpandableTableViewExample
+//  SubBoardCell.swift
+//  STask_IOS_APP
 //
-//  Created by Laurentiu Ungur on 24/11/2016.
-//  Copyright © 2016 Laurentiu Ungur. All rights reserved.
+//  Created by Ahmed ElWa7sh on 8/15/20.
+//  Copyright © 2020 Susfweb. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-final class BoardCell: UITableViewCell {
+
+final class SubBoardCell: UITableViewCell {
     
     let label = UILabel()
 
-    @IBOutlet weak var tableView: UITableView!
-    
-    
-    
+//    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTitle: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

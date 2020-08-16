@@ -23,10 +23,15 @@ import FileBrowser
 @available(iOS 13.0, *)
 class BoardVController2: UIViewController{
     
+    
+    var tableViewSub: UITableView?
+
     var boardId: String = ""
     private var indicator = MaterialActivityIndicatorView()
     private let expandableTableView = LUExpandableTableView()
     private let cellReuseIdentifier = "BoardCell"
+    private let cellReuseIdentifierSub = "SubBoardCell"
+
     private let sectionHeaderReuseIdentifier = "BoardSectionHeader"
     fileprivate var boardDataLst: [BoardDataListModel] = []
     fileprivate var nestedBoard: [Int: [NestedBoard]] = [:]
@@ -265,6 +270,9 @@ class BoardVController2: UIViewController{
     
     func getAllBoards(){
         self.startLoading()
+        
+        print("dodoPP  = \(Utils.fetchSavedUser().data.token)")
+        
         let headers: HTTPHeaders = [
             .accept("application/json"),
             .contentType("Content-Type"),
@@ -307,10 +315,41 @@ class BoardVController2: UIViewController{
                             
                             self.boardDataLst = boardData.data?.BoardDataList as! [BoardDataListModel]
                             
+                            
+                            //get first nestedBoard
                             for n in 0...self.boardDataLst.count-1 {
                                 self.nestedBoard[n] = self.boardDataLst[n].nestedBoard
+                                
+                                var arr1: [NestedBoard] = []
+                                var arr2: [NestedBoard] = []
+                                var total: [NestedBoard] = self.boardDataLst[n].nestedBoard!
+                                
+
+                                for i in 0..<self.boardDataLst[n].nestedBoard!.count {
+                                    
+                                    arr1 = self.boardDataLst[n].nestedBoard![i].nestedBoard!
+//                                    arr2 = self.boardDataLst[n].nestedBoard!
+                                    
+                                    //print("dfdfp0 ==\(arr1.count )  = \(arr2.count)")
+
+                                    total += arr1
+                                    
+                                }
+                                //update
+                                self.nestedBoard[n] = total
+                                print("total_3843 ==\(arr1) )")
+                                print("total_3843 ==\(arr2) )")
+
+                                
                             }
                             
+                            
+                            
+                            for (kind, nested) in self.nestedBoard {
+                                for obj in nested {
+                                   
+                                }
+                            }
                             
                             
                             self.expandableTableView.reloadData()
@@ -351,6 +390,37 @@ class BoardVController2: UIViewController{
 }
 
 
+
+extension BoardVController2 : UITableViewDelegate{
+    
+    
+    
+}
+
+extension BoardVController2 : UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0;
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifierSub, for: indexPath) as? SubBoardCell
+        
+        
+//        cell?.label.text =
+        
+        
+        return cell!
+        
+    }
+    
+    
+    
+    
+}
+
+
+
 @available(iOS 13.0, *)
 extension BoardVController2: LUExpandableTableViewDataSource {
     func numberOfSections(in expandableTableView: LUExpandableTableView) -> Int {
@@ -377,6 +447,13 @@ extension BoardVController2: LUExpandableTableViewDataSource {
         //cell.label.text = text
         cell.lblTitle.text = text
         
+//        self.tableViewSub =  cell.tableView
+//        self.tableViewSub!.register(UINib(nibName: cellReuseIdentifierSub, bundle: .main), forCellReuseIdentifier: cellReuseIdentifierSub)
+//        self.tableViewSub?.delegate = self
+//        self.tableViewSub?.dataSource = self
+//        self.tableViewSub?.reloadData()
+        
+        
         return cell
     }
     
@@ -392,6 +469,7 @@ extension BoardVController2: LUExpandableTableViewDataSource {
         sectionHeader.label.text = boardData.name
         sectionHeader.labelColor.backgroundColor = Utils.hexStringToUIColor(hex: boardData.color!)
         sectionHeader.iconLocker.isHidden = !boardData.isPrivate!
+        
         
         return sectionHeader
     }

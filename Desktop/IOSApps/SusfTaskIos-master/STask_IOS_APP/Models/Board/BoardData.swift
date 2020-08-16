@@ -19,16 +19,16 @@ struct DataClassAllBoards: Codable {
 
 // MARK: - BoardDataList
 struct BoardDataListModel: Codable {
-    let id: String?
+    var id: String?
     //let _id: String?
-    let isPrivate: Bool?
-    let name: String?
+    var isPrivate: Bool?
+    var name: String?
     //let description: JSONNull?
-    let description: String?
-    let color: String?
-    let isArchive, isDelete: Bool?
-    let createdAt: String?
-    let nestedBoard: [NestedBoard]?
+    var description: String?
+    var color: String?
+    var isArchive, isDelete: Bool?
+    var createdAt: String?
+    var nestedBoard: [NestedBoard]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -41,22 +41,36 @@ struct BoardDataListModel: Codable {
 
 // MARK: - NestedBoard
 struct NestedBoard: Codable {
-    let isPrivate, isArchive, isDelete: Bool?
-    let id, name, templateId, ownerId: String?
-    //let description: JSONNull?
-    let description: String?
+    var isPrivate, isArchive, isDelete: Bool?
+    var id, name, templateId, ownerId: String?
+    var description: String?
+//    var nestedBoard: [NestedBoardSub]?
+    var nestedBoard: [NestedBoard]?
 
+    enum CodingKeys: String, CodingKey {
+        case isPrivate, isArchive, isDelete, id, name
+        case templateId
+        case ownerId
+        case nestedBoard
+        case description
+    }
+}
+
+struct NestedBoardSub: Codable {
+    let isPrivate, isArchive, isDelete: Bool?
+    let id, name, templateId, ownerId, parentId: String?
+    let description: String?
     
     enum CodingKeys: String, CodingKey {
         case isPrivate, isArchive, isDelete, id, name
         case templateId
         case ownerId
+        case parentId
         case description
     }
 }
 
 // MARK: - Encode/decode helpers
-
 class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
